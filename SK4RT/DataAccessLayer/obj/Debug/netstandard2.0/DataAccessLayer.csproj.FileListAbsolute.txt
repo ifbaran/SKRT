@@ -1,0 +1,8 @@
+C:\YEREL DİSK D\SK4RT\SK4RT\DataAccessLayer\bin\Debug\netstandard2.0\DataAccessLayer.deps.json
+C:\YEREL DİSK D\SK4RT\SK4RT\DataAccessLayer\bin\Debug\netstandard2.0\DataAccessLayer.dll
+C:\YEREL DİSK D\SK4RT\SK4RT\DataAccessLayer\bin\Debug\netstandard2.0\DataAccessLayer.pdb
+C:\YEREL DİSK D\SK4RT\SK4RT\DataAccessLayer\obj\Debug\netstandard2.0\DataAccessLayer.csprojAssemblyReference.cache
+C:\YEREL DİSK D\SK4RT\SK4RT\DataAccessLayer\obj\Debug\netstandard2.0\DataAccessLayer.AssemblyInfoInputs.cache
+C:\YEREL DİSK D\SK4RT\SK4RT\DataAccessLayer\obj\Debug\netstandard2.0\DataAccessLayer.AssemblyInfo.cs
+C:\YEREL DİSK D\SK4RT\SK4RT\DataAccessLayer\obj\Debug\netstandard2.0\DataAccessLayer.dll
+C:\YEREL DİSK D\SK4RT\SK4RT\DataAccessLayer\obj\Debug\netstandard2.0\DataAccessLayer.pdb

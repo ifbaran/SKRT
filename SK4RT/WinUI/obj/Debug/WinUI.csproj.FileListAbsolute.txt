@@ -1,0 +1,10 @@
+C:\YEREL DİSK D\SK4RT\SK4RT\WinUI\bin\Debug\WinUI.exe.config
+C:\YEREL DİSK D\SK4RT\SK4RT\WinUI\bin\Debug\WinUI.exe
+C:\YEREL DİSK D\SK4RT\SK4RT\WinUI\bin\Debug\WinUI.pdb
+C:\YEREL DİSK D\SK4RT\SK4RT\WinUI\obj\Debug\WinUI.csprojAssemblyReference.cache
+C:\YEREL DİSK D\SK4RT\SK4RT\WinUI\obj\Debug\WinUI.Login.resources
+C:\YEREL DİSK D\SK4RT\SK4RT\WinUI\obj\Debug\WinUI.Properties.Resources.resources
+C:\YEREL DİSK D\SK4RT\SK4RT\WinUI\obj\Debug\WinUI.SK4RT.resources
+C:\YEREL DİSK D\SK4RT\SK4RT\WinUI\obj\Debug\WinUI.csproj.GenerateResource.cache
+C:\YEREL DİSK D\SK4RT\SK4RT\WinUI\obj\Debug\WinUI.exe
+C:\YEREL DİSK D\SK4RT\SK4RT\WinUI\obj\Debug\WinUI.pdb
