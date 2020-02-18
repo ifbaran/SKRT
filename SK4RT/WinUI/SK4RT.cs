@@ -129,6 +129,14 @@ namespace WinUI
         #region Film Butonları
         private void btnFilm1_Click(object sender, EventArgs e)
         {
+            panelContent.Controls.Clear();
+            Film film = new Film(btnFilm1.Text);
+            film.TopLevel = false;
+            panelContent.Controls.Add(film);
+            film.Show();
+            film.Dock = DockStyle.Fill;
+            
+            
             //...
             // operations
             //...
@@ -139,6 +147,12 @@ namespace WinUI
 
         private void btnFilm2_Click(object sender, EventArgs e)
         {
+            panelContent.Controls.Clear();
+            Film film = new Film(btnFilm2.Text);
+            film.TopLevel = false;
+            panelContent.Controls.Add(film);
+            film.Show();
+            film.Dock = DockStyle.Fill;
             //...
             // operations
             //...

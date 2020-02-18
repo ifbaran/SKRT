@@ -459,24 +459,24 @@ namespace WinUI
             // 
             // panelContent
             // 
-            this.panelContent.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(55)))));
             this.panelContent.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelContent.Location = new System.Drawing.Point(253, 46);
             this.panelContent.Name = "panelContent";
             this.panelContent.Size = new System.Drawing.Size(1047, 734);
-            this.panelContent.TabIndex = 3;
+            this.panelContent.TabIndex = 4;
             // 
             // SK4RT
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(55)))));
             this.ClientSize = new System.Drawing.Size(1300, 880);
             this.Controls.Add(this.panelContent);
             this.Controls.Add(this.panelFooter);
             this.Controls.Add(this.panelMenu);
             this.Controls.Add(this.panelTop);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.IsMdiContainer = true;
             this.Name = "SK4RT";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Software Kiosque for Art";
@@ -509,9 +509,7 @@ namespace WinUI
         private Button btnFilm4;
         private Button btnFilm3;
         private Button btnFilm2;
-        private Button btnFilm1;
         private Panel panelFooter;
-        private Panel panelContent;
         private Button btnTheatres;
         private PictureBox picLogo;
         private Panel panelTheaters;
@@ -525,6 +523,8 @@ namespace WinUI
         private Panel panelContact;
         private Button btnSendMailWorker;
         private Button btnSendMailCustomer;
+        private Panel panelContent;
+        public Button btnFilm1;
         //protected override void OnPaint(PaintEventArgs e)
         //{
         //    ControlPaint.DrawBorder(e.Graphics, ClientRectangle, System.Drawing.Color as color ,ButtonBorderStyle.Solid);

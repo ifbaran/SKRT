@@ -25,6 +25,15 @@
         "build": {
           "build/netstandard2.0/NETStandard.Library.targets": {}
         }
+      },
+      "WinUI/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/WinUI.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/WinUI.dll": {}
+        }
       }
     }
   },
@@ -171,11 +180,17 @@
         "netstandard.library.2.0.3.nupkg.sha512",
         "netstandard.library.nuspec"
       ]
+    },
+    "WinUI/1.0.0": {
+      "type": "project",
+      "path": "../WinUI/WinUI.csproj",
+      "msbuildProject": "../WinUI/WinUI.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.0": [
-      "NETStandard.Library >= 2.0.3"
+      "NETStandard.Library >= 2.0.3",
+      "WinUI >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -207,7 +222,11 @@
       },
       "frameworks": {
         "netstandard2.0": {
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\YEREL DİSK D\\SK4RT\\SK4RT\\WinUI\\WinUI.csproj": {
+              "projectPath": "C:\\YEREL DİSK D\\SK4RT\\SK4RT\\WinUI\\WinUI.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

@@ -8,3 +8,4 @@ C:\YEREL DİSK D\SK4RT\SK4RT\WinUI\obj\Debug\WinUI.SK4RT.resources
 C:\YEREL DİSK D\SK4RT\SK4RT\WinUI\obj\Debug\WinUI.csproj.GenerateResource.cache
 C:\YEREL DİSK D\SK4RT\SK4RT\WinUI\obj\Debug\WinUI.exe
 C:\YEREL DİSK D\SK4RT\SK4RT\WinUI\obj\Debug\WinUI.pdb
+C:\YEREL DİSK D\SK4RT\SK4RT\WinUI\obj\Debug\WinUI.Film.resources
