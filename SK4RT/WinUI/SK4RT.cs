@@ -140,9 +140,6 @@ namespace WinUI
             //...
             // operations
             //...
-            //hideSubMenu(panelFilms);
-            hideSubMenu(panelTheaters);
-            hideSubMenu(panelContact);
         }
 
         private void btnFilm2_Click(object sender, EventArgs e)
@@ -156,39 +153,45 @@ namespace WinUI
             //...
             // operations
             //...
-            //hideSubMenu(panelFilms);
-            hideSubMenu(panelTheaters);
-            hideSubMenu(panelContact);
         }
 
         private void btnFilm3_Click(object sender, EventArgs e)
         {
+            panelContent.Controls.Clear();
+            Film film = new Film(btnFilm3.Text);
+            film.TopLevel = false;
+            panelContent.Controls.Add(film);
+            film.Show();
+            film.Dock = DockStyle.Fill;
             //...
             // operations
             //...
-            //hideSubMenu(panelFilms);
-            hideSubMenu(panelTheaters);
-            hideSubMenu(panelContact);
         }
 
         private void btnFilm4_Click(object sender, EventArgs e)
         {
+            panelContent.Controls.Clear();
+            Film film = new Film(btnFilm4.Text);
+            film.TopLevel = false;
+            panelContent.Controls.Add(film);
+            film.Show();
+            film.Dock = DockStyle.Fill;
             //...
             // operations
             //...
-            //hideSubMenu(panelFilms);
-            hideSubMenu(panelTheaters);
-            hideSubMenu(panelContact);
         }
 
         private void btnFilm5_Click(object sender, EventArgs e)
         {
+            panelContent.Controls.Clear();
+            Film film = new Film(btnFilm5.Text);
+            film.TopLevel = false;
+            panelContent.Controls.Add(film);
+            film.Show();
+            film.Dock = DockStyle.Fill;
             //...
             // operations
             //...
-            //hideSubMenu(panelFilms);
-            hideSubMenu(panelTheaters);
-            hideSubMenu(panelContact);
         }
 
         #endregion
@@ -196,53 +199,67 @@ namespace WinUI
         #region Tiyatro Butonları
         private void btnThe1_Click(object sender, EventArgs e)
         {
+            panelContent.Controls.Clear();
+            Theater theater = new Theater(btnThe1.Text);
+            theater.TopLevel = false;
+            panelContent.Controls.Add(theater);
+            theater.Show();
+            theater.Dock = DockStyle.Fill;
             //...
             // operations
             //...
-            hideSubMenu(panelTheaters);
-            hideSubMenu(panelFilms);
-            hideSubMenu(panelContact);
         }
 
         private void btnThe2_Click(object sender, EventArgs e)
         {
+            panelContent.Controls.Clear();
+            Theater theater = new Theater(btnThe2.Text);
+            theater.TopLevel = false;
+            panelContent.Controls.Add(theater);
+            theater.Show();
+            theater.Dock = DockStyle.Fill;
             //...
             // operations
             //...
-            hideSubMenu(panelTheaters);
-            hideSubMenu(panelFilms);
-            hideSubMenu(panelContact);
         }
 
         private void btnThe3_Click(object sender, EventArgs e)
         {
+            panelContent.Controls.Clear();
+            Theater theater = new Theater(btnThe3.Text);
+            theater.TopLevel = false;
+            panelContent.Controls.Add(theater);
+            theater.Show();
+            theater.Dock = DockStyle.Fill;
             //...
             // operations
             //...
-            hideSubMenu(panelTheaters);
-            hideSubMenu(panelFilms);
-            hideSubMenu(panelContact);
         }
 
         private void btnThe4_Click(object sender, EventArgs e)
         {
+            panelContent.Controls.Clear();
+            Theater theater = new Theater(btnThe4.Text);
+            theater.TopLevel = false;
+            panelContent.Controls.Add(theater);
+            theater.Show();
+            theater.Dock = DockStyle.Fill;
             //...
             // operations
             //...
-            hideSubMenu(panelTheaters);
-            hideSubMenu(panelFilms);
-            hideSubMenu(panelContact);
         }
 
         private void btnThe5_Click(object sender, EventArgs e)
         {
+            panelContent.Controls.Clear();
+            Theater theater = new Theater(btnThe5.Text);
+            theater.TopLevel = false;
+            panelContent.Controls.Add(theater);
+            theater.Show();
+            theater.Dock = DockStyle.Fill;
             //...
             // operations
             //...
-            hideSubMenu(panelTheaters);
-            hideSubMenu(panelFilms);
-            hideSubMenu(panelContact);
-            hideSubMenu(panelContact);
         }
 
         #endregion
@@ -250,23 +267,25 @@ namespace WinUI
         #region Mail Butonları
         private void btnSendMailCustomer_Click(object sender, EventArgs e)
         {
-            hideSubMenu(panelTheaters);
-            hideSubMenu(panelFilms);
-            hideSubMenu(panelContact);
+            //...
+            // operations
+            //...
+            //hideSubMenu(panelTheaters);
+            //hideSubMenu(panelFilms);
+            //hideSubMenu(panelContact);
         }
 
         private void btnSendMailWorker_Click(object sender, EventArgs e)
         {
-            hideSubMenu(panelTheaters);
-            hideSubMenu(panelFilms);
-            hideSubMenu(panelContact);
+            //...
+            // operations
+            //...
+            //hideSubMenu(panelTheaters);
+            //hideSubMenu(panelFilms);
+            //hideSubMenu(panelContact);
         }
-
-
-
-
-
         #endregion
+
 
     }
 }
