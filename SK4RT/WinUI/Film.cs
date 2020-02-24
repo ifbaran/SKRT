@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Drawing.Drawing2D;
+using BusinessLogicLayer;
+using System.Collections;
 
 namespace WinUI
 {
@@ -22,7 +24,7 @@ namespace WinUI
 
         private void Film_Load(object sender, EventArgs e)
         {
-
+            //bll.GetOccupiedChairs();
         }
 
         private void Film_FormClosed(object sender, FormClosedEventArgs e)
@@ -30,9 +32,33 @@ namespace WinUI
             this.Dispose();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        ArrayList chairs = new ArrayList();
+
+        bool isSelectedButton = false;
+
+        private void btnChair_Click(object sender, EventArgs e)
         {
+            Button btn = ((Button)sender);
+
+
+            if (isSelectedButton == false)
+            {
+                btn.Image = System.Drawing.Image.FromFile(@"C:\YEREL DİSK D\SK4RT\SK4RT\img\yellowChair.png");
+                isSelectedButton = true;
+            }
+            else
+            {
+                btn.Image = System.Drawing.Image.FromFile(@"C:\YEREL DİSK D\SK4RT\SK4RT\img\turqouisChair.png");
+                isSelectedButton = false;
+            }
+                
+
+
+
+            var btnName = ((Button)sender).Name;
 
         }
+
+
     }
 }

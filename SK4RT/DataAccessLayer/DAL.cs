@@ -10,6 +10,10 @@ namespace DataAccessLayer
     {
         private string connectionString = @"Data Source = C:\YEREL DİSK D\SK4RT\SK4RT\Database\database.db";
         SQLiteConnection con;
+        SQLiteCommand cmd;
+        SQLiteDataReader reader;
+        SQLiteDataAdapter adapter;
+        DataSet ds;
 
         public DAL()
         {
@@ -27,28 +31,33 @@ namespace DataAccessLayer
             con.Close();
         }
 
-        public int executeNonQuery(string query)
+        public int ExecuteNonQuery(string query) // Insert,Update,Delete
         {
-            SQLiteCommand cmd = new SQLiteCommand();
+            cmd = new SQLiteCommand();
             cmd.CommandText = query;
             cmd.CommandType = CommandType.Text;
             return cmd.ExecuteNonQuery();
         }
+        public int ExecuteQueries(string Query_)
+        {
+            cmd = new SQLiteCommand(Query_, con);
+            return cmd.ExecuteNonQuery();
 
+        }
         public SQLiteDataReader dataReader(string query)
         {
-            SQLiteCommand cmd = new SQLiteCommand(query);
-            SQLiteDataReader dr = cmd.ExecuteReader();
+            cmd = new SQLiteCommand(query);
+            reader = cmd.ExecuteReader();
 
             closeConnection();
-            return dr;
+            return reader;
         }
 
-        public DataTable showDataInGridView(string query)
+        public DataTable ShowDataInGridView(string query)
         {
-            SQLiteDataAdapter dataAdapter = new SQLiteDataAdapter(query, connectionString);
-            DataSet ds = new DataSet();
-            dataAdapter.Fill(ds);
+            adapter = new SQLiteDataAdapter(query, connectionString);
+            ds = new DataSet();
+            adapter.Fill(ds);
 
             DataTable dataTable = ds.Tables[0];
             closeConnection();

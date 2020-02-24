@@ -6,7 +6,6 @@ C:\YEREL DİSK D\SK4RT\SK4RT\BusinessLogicLayer\obj\Debug\netstandard2.0\Busines
 C:\YEREL DİSK D\SK4RT\SK4RT\BusinessLogicLayer\obj\Debug\netstandard2.0\BusinessLogicLayer.AssemblyInfo.cs
 C:\YEREL DİSK D\SK4RT\SK4RT\BusinessLogicLayer\obj\Debug\netstandard2.0\BusinessLogicLayer.dll
 C:\YEREL DİSK D\SK4RT\SK4RT\BusinessLogicLayer\obj\Debug\netstandard2.0\BusinessLogicLayer.pdb
-C:\YEREL DİSK D\SK4RT\SK4RT\BusinessLogicLayer\bin\Debug\netstandard2.0\WinUI.exe
-C:\YEREL DİSK D\SK4RT\SK4RT\BusinessLogicLayer\bin\Debug\netstandard2.0\WinUI.pdb
-C:\YEREL DİSK D\SK4RT\SK4RT\BusinessLogicLayer\bin\Debug\netstandard2.0\WinUI.exe.config
 C:\YEREL DİSK D\SK4RT\SK4RT\BusinessLogicLayer\obj\Debug\netstandard2.0\BusinessLogicLayer.csproj.CopyComplete
+C:\YEREL DİSK D\SK4RT\SK4RT\BusinessLogicLayer\bin\Debug\netstandard2.0\DataAccessLayer.dll
+C:\YEREL DİSK D\SK4RT\SK4RT\BusinessLogicLayer\bin\Debug\netstandard2.0\DataAccessLayer.pdb

@@ -10,3 +10,8 @@ C:\YEREL DİSK D\SK4RT\SK4RT\WinUI\obj\Debug\WinUI.exe
 C:\YEREL DİSK D\SK4RT\SK4RT\WinUI\obj\Debug\WinUI.pdb
 C:\YEREL DİSK D\SK4RT\SK4RT\WinUI\obj\Debug\WinUI.Film.resources
 C:\YEREL DİSK D\SK4RT\SK4RT\WinUI\obj\Debug\WinUI.Theater.resources
+C:\YEREL DİSK D\SK4RT\SK4RT\WinUI\bin\Debug\BusinessLogicLayer.dll
+C:\YEREL DİSK D\SK4RT\SK4RT\WinUI\bin\Debug\DataAccessLayer.dll
+C:\YEREL DİSK D\SK4RT\SK4RT\WinUI\bin\Debug\BusinessLogicLayer.pdb
+C:\YEREL DİSK D\SK4RT\SK4RT\WinUI\bin\Debug\DataAccessLayer.pdb
+C:\YEREL DİSK D\SK4RT\SK4RT\WinUI\obj\Debug\WinUI.csproj.CopyComplete
