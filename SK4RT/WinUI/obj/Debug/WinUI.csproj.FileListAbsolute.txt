@@ -15,3 +15,12 @@ C:\YEREL DİSK D\SK4RT\SK4RT\WinUI\bin\Debug\DataAccessLayer.dll
 C:\YEREL DİSK D\SK4RT\SK4RT\WinUI\bin\Debug\BusinessLogicLayer.pdb
 C:\YEREL DİSK D\SK4RT\SK4RT\WinUI\bin\Debug\DataAccessLayer.pdb
 C:\YEREL DİSK D\SK4RT\SK4RT\WinUI\obj\Debug\WinUI.csproj.CopyComplete
+C:\YEREL DİSK D\SK4RT\SK4RT\WinUI\bin\Debug\EntityFramework.dll
+C:\YEREL DİSK D\SK4RT\SK4RT\WinUI\bin\Debug\EntityFramework.SqlServer.dll
+C:\YEREL DİSK D\SK4RT\SK4RT\WinUI\bin\Debug\System.Data.SQLite.dll
+C:\YEREL DİSK D\SK4RT\SK4RT\WinUI\bin\Debug\System.Data.SQLite.EF6.dll
+C:\YEREL DİSK D\SK4RT\SK4RT\WinUI\bin\Debug\System.Data.SQLite.Linq.dll
+C:\YEREL DİSK D\SK4RT\SK4RT\WinUI\bin\Debug\EntityFramework.xml
+C:\YEREL DİSK D\SK4RT\SK4RT\WinUI\bin\Debug\EntityFramework.SqlServer.xml
+C:\YEREL DİSK D\SK4RT\SK4RT\WinUI\bin\Debug\System.Data.SQLite.xml
+C:\YEREL DİSK D\SK4RT\SK4RT\WinUI\bin\Debug\System.Data.SQLite.dll.config

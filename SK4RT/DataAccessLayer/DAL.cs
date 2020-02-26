@@ -8,7 +8,7 @@ namespace DataAccessLayer
 {
     public class DAL
     {
-        private string connectionString = @"Data Source = C:\YEREL DİSK D\SK4RT\SK4RT\Database\database.db";
+        private string connectionString = @"DataSource = C:\YEREL DİSK D\SK4RT\SK4RT\Database\database.db";
         SQLiteConnection con;
         SQLiteCommand cmd;
         SQLiteDataReader reader;
