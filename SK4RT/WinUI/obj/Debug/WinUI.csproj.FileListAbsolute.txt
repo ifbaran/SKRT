@@ -24,3 +24,4 @@ C:\YEREL DİSK D\SK4RT\SK4RT\WinUI\bin\Debug\EntityFramework.xml
 C:\YEREL DİSK D\SK4RT\SK4RT\WinUI\bin\Debug\EntityFramework.SqlServer.xml
 C:\YEREL DİSK D\SK4RT\SK4RT\WinUI\bin\Debug\System.Data.SQLite.xml
 C:\YEREL DİSK D\SK4RT\SK4RT\WinUI\bin\Debug\System.Data.SQLite.dll.config
+C:\YEREL DİSK D\SK4RT\SK4RT\WinUI\obj\Debug\WinUI.CustomerForm.resources

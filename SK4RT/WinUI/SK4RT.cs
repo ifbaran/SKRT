@@ -28,16 +28,26 @@ namespace WinUI
         }
         private void SK4RT_Load(object sender, EventArgs e)
         {
+            btnFilm1.Text = string.Empty;
             btnFilm1.Text = filmModule.FilmName(0);
+            btnFilm2.Text = string.Empty;
             btnFilm2.Text = filmModule.FilmName(1);
+            btnFilm3.Text = string.Empty;
             btnFilm3.Text = filmModule.FilmName(2);
+            btnFilm4.Text = string.Empty;
             btnFilm4.Text = filmModule.FilmName(3);
+            btnFilm5.Text = string.Empty;
             btnFilm5.Text = filmModule.FilmName(4);
-            btnThe1.Text = theaterModule.TheaterName(0);
-            btnThe2.Text = theaterModule.TheaterName(1);
-            btnThe3.Text = theaterModule.TheaterName(2);
-            btnThe4.Text = theaterModule.TheaterName(3);
-            btnThe5.Text = theaterModule.TheaterName(4);
+            btnThe1.Text = string.Empty;
+            btnThe1.Text = theaterModule.GetTheaterName(0);
+            btnThe2.Text = string.Empty;
+            btnThe2.Text = theaterModule.GetTheaterName(1);
+            btnThe3.Text = string.Empty;
+            btnThe3.Text = theaterModule.GetTheaterName(2);
+            btnThe4.Text = string.Empty;
+            btnThe4.Text = theaterModule.GetTheaterName(3);
+            btnThe5.Text = string.Empty;
+            btnThe5.Text = theaterModule.GetTheaterName(4);
 
         }
 
@@ -305,5 +315,14 @@ namespace WinUI
 
         #endregion
 
+        private void btnMusteriListe_Click(object sender, EventArgs e)
+        {
+            panelContent.Controls.Clear();
+            CustomerForm customerForm = new CustomerForm();
+            customerForm.TopLevel = false;
+            panelContent.Controls.Add(customerForm);
+            customerForm.Show();
+            customerForm.Dock = DockStyle.Fill;
+        }
     }
 }

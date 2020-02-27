@@ -193,6 +193,7 @@ namespace WinUI
             this.btnMusteriListe.TabIndex = 5;
             this.btnMusteriListe.Text = "Show Customers";
             this.btnMusteriListe.UseVisualStyleBackColor = true;
+            this.btnMusteriListe.Click += new System.EventHandler(this.btnMusteriListe_Click);
             this.btnMusteriListe.MouseLeave += new System.EventHandler(this.btnMusteriListe_MouseLeave);
             this.btnMusteriListe.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btnMusteriListe_MouseMove);
             // 
@@ -221,6 +222,7 @@ namespace WinUI
             this.btnThe5.Name = "btnThe5";
             this.btnThe5.Size = new System.Drawing.Size(253, 34);
             this.btnThe5.TabIndex = 11;
+            this.btnThe5.Text = "Theater 5";
             this.btnThe5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnThe5.UseVisualStyleBackColor = false;
             this.btnThe5.Click += new System.EventHandler(this.btnThe5_Click);
@@ -237,6 +239,7 @@ namespace WinUI
             this.btnThe4.Name = "btnThe4";
             this.btnThe4.Size = new System.Drawing.Size(253, 34);
             this.btnThe4.TabIndex = 10;
+            this.btnThe4.Text = "Theater 4";
             this.btnThe4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnThe4.UseVisualStyleBackColor = false;
             this.btnThe4.Click += new System.EventHandler(this.btnThe4_Click);
@@ -253,6 +256,7 @@ namespace WinUI
             this.btnThe3.Name = "btnThe3";
             this.btnThe3.Size = new System.Drawing.Size(253, 34);
             this.btnThe3.TabIndex = 9;
+            this.btnThe3.Text = "Theater 3";
             this.btnThe3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnThe3.UseVisualStyleBackColor = false;
             this.btnThe3.Click += new System.EventHandler(this.btnThe3_Click);
@@ -269,6 +273,7 @@ namespace WinUI
             this.btnThe2.Name = "btnThe2";
             this.btnThe2.Size = new System.Drawing.Size(253, 34);
             this.btnThe2.TabIndex = 8;
+            this.btnThe2.Text = "Theater 2";
             this.btnThe2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnThe2.UseVisualStyleBackColor = false;
             this.btnThe2.Click += new System.EventHandler(this.btnThe2_Click);
@@ -285,6 +290,7 @@ namespace WinUI
             this.btnThe1.Name = "btnThe1";
             this.btnThe1.Size = new System.Drawing.Size(253, 34);
             this.btnThe1.TabIndex = 7;
+            this.btnThe1.Text = "Theater 1";
             this.btnThe1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnThe1.UseVisualStyleBackColor = false;
             this.btnThe1.Click += new System.EventHandler(this.btnThe1_Click);
@@ -331,6 +337,7 @@ namespace WinUI
             this.btnFilm5.Name = "btnFilm5";
             this.btnFilm5.Size = new System.Drawing.Size(253, 34);
             this.btnFilm5.TabIndex = 6;
+            this.btnFilm5.Text = "Film 5";
             this.btnFilm5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnFilm5.UseVisualStyleBackColor = false;
             this.btnFilm5.Click += new System.EventHandler(this.btnFilm5_Click);
@@ -347,6 +354,7 @@ namespace WinUI
             this.btnFilm4.Name = "btnFilm4";
             this.btnFilm4.Size = new System.Drawing.Size(253, 34);
             this.btnFilm4.TabIndex = 5;
+            this.btnFilm4.Text = "Film 4";
             this.btnFilm4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnFilm4.UseVisualStyleBackColor = false;
             this.btnFilm4.Click += new System.EventHandler(this.btnFilm4_Click);
@@ -363,6 +371,7 @@ namespace WinUI
             this.btnFilm3.Name = "btnFilm3";
             this.btnFilm3.Size = new System.Drawing.Size(253, 34);
             this.btnFilm3.TabIndex = 4;
+            this.btnFilm3.Text = "Film 3";
             this.btnFilm3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnFilm3.UseVisualStyleBackColor = false;
             this.btnFilm3.Click += new System.EventHandler(this.btnFilm3_Click);
@@ -379,6 +388,7 @@ namespace WinUI
             this.btnFilm2.Name = "btnFilm2";
             this.btnFilm2.Size = new System.Drawing.Size(253, 34);
             this.btnFilm2.TabIndex = 3;
+            this.btnFilm2.Text = "Film 2";
             this.btnFilm2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnFilm2.UseVisualStyleBackColor = false;
             this.btnFilm2.Click += new System.EventHandler(this.btnFilm2_Click);
@@ -395,6 +405,7 @@ namespace WinUI
             this.btnFilm1.Name = "btnFilm1";
             this.btnFilm1.Size = new System.Drawing.Size(253, 34);
             this.btnFilm1.TabIndex = 2;
+            this.btnFilm1.Text = "Film 1";
             this.btnFilm1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnFilm1.UseVisualStyleBackColor = false;
             this.btnFilm1.Click += new System.EventHandler(this.btnFilm1_Click);

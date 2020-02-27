@@ -16,6 +16,7 @@ namespace WinUI
     public partial class Film : Form
     {
         SK4RT mainForm = new SK4RT();
+        BusinessLogicLayer.CustomerModule customerModule = new CustomerModule();
         public Film(string filmAdi)
         {
             InitializeComponent();
