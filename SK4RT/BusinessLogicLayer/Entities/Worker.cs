@@ -4,11 +4,12 @@ using System.Text;
 
 namespace BusinessLogicLayer.Entities
 {
-    public class Worker
+    public class Worker:Person
     {
-        public int WorkerID { get; set; }
-        public string WorkerName { get; set; }
-        public string WorkerSurname { get; set; }
-        public string WorkerEmail { get; set; }
+        string nickName;
+        string password;
+
+        public string NickName { get => nickName; set => nickName = value; }
+        public string Password { get => password; set => password = value; }
     }
 }

@@ -39,7 +39,7 @@ namespace WinUI
             this.btnSendMailWorker = new System.Windows.Forms.Button();
             this.btnSendMailCustomer = new System.Windows.Forms.Button();
             this.btnContact = new System.Windows.Forms.Button();
-            this.btnMusteriListe = new System.Windows.Forms.Button();
+            this.btnList = new System.Windows.Forms.Button();
             this.panelTheaters = new System.Windows.Forms.Panel();
             this.btnThe5 = new System.Windows.Forms.Button();
             this.btnThe4 = new System.Windows.Forms.Button();
@@ -109,7 +109,7 @@ namespace WinUI
             this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(5)))), ((int)(((byte)(30)))));
             this.panelMenu.Controls.Add(this.panelContact);
             this.panelMenu.Controls.Add(this.btnContact);
-            this.panelMenu.Controls.Add(this.btnMusteriListe);
+            this.panelMenu.Controls.Add(this.btnList);
             this.panelMenu.Controls.Add(this.panelTheaters);
             this.panelMenu.Controls.Add(this.btnTheatres);
             this.panelMenu.Controls.Add(this.panelFilms);
@@ -180,22 +180,22 @@ namespace WinUI
             this.btnContact.UseVisualStyleBackColor = true;
             this.btnContact.Click += new System.EventHandler(this.btnContact_Click);
             // 
-            // btnMusteriListe
+            // btnList
             // 
-            this.btnMusteriListe.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnMusteriListe.FlatAppearance.BorderSize = 0;
-            this.btnMusteriListe.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMusteriListe.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.btnMusteriListe.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnMusteriListe.Location = new System.Drawing.Point(0, 547);
-            this.btnMusteriListe.Name = "btnMusteriListe";
-            this.btnMusteriListe.Size = new System.Drawing.Size(253, 53);
-            this.btnMusteriListe.TabIndex = 5;
-            this.btnMusteriListe.Text = "Show Customers";
-            this.btnMusteriListe.UseVisualStyleBackColor = true;
-            this.btnMusteriListe.Click += new System.EventHandler(this.btnMusteriListe_Click);
-            this.btnMusteriListe.MouseLeave += new System.EventHandler(this.btnMusteriListe_MouseLeave);
-            this.btnMusteriListe.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btnMusteriListe_MouseMove);
+            this.btnList.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnList.FlatAppearance.BorderSize = 0;
+            this.btnList.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnList.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.btnList.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnList.Location = new System.Drawing.Point(0, 547);
+            this.btnList.Name = "btnList";
+            this.btnList.Size = new System.Drawing.Size(253, 53);
+            this.btnList.TabIndex = 5;
+            this.btnList.Text = "Show";
+            this.btnList.UseVisualStyleBackColor = true;
+            this.btnList.Click += new System.EventHandler(this.btnList_Click);
+            this.btnList.MouseLeave += new System.EventHandler(this.btnMusteriListe_MouseLeave);
+            this.btnList.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btnMusteriListe_MouseMove);
             // 
             // panelTheaters
             // 
@@ -520,7 +520,7 @@ namespace WinUI
         private Button btnThe3;
         private Button btnThe2;
         private Button btnThe1;
-        private Button btnMusteriListe;
+        private Button btnList;
         private Button btnContact;
         private Panel panelContact;
         private Button btnSendMailWorker;

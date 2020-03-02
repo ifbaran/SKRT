@@ -6,9 +6,13 @@ namespace BusinessLogicLayer.Entities
 {
     public class Room
     {
-        public int RoomID { get; set; }
-        public string Name { get; set; }
-        public int Capacity { get; set; }
 
+        int roomID;
+        string name;
+        int capacity;
+
+        public int RoomID { get => roomID; set => roomID = value; }
+        public string Name { get => name; set => name = value; }
+        public int Capacity { get => capacity; set => capacity = value; }
     }
 }

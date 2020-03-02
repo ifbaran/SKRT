@@ -4,12 +4,7 @@ using System.Text;
 
 namespace BusinessLogicLayer.Entities
 {
-    public class Theater
+    public class Theater:Show
     {
-        public int TheaterID { get; set; }
-        public string TheaterName { get; set; }
-        public string TheaterAuthor { get; set; }
-        public DateTime TheaterDate { get; set; }
-
     }
 }

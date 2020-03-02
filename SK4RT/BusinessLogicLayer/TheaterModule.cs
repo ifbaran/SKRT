@@ -2,62 +2,47 @@
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Data.SqlClient;
 using System.Text;
 
 namespace BusinessLogicLayer
 {
-    public class TheaterModule : Entities.Theater
+    public class TheaterModule : BaseClass<Theater>
     {
         DataAccessLayer.DAL dal;
 
-        public bool Insert(Theater theater)
+        public TheaterModule()
         {
             dal = new DataAccessLayer.DAL();
-            try
-            {
-                string query = string.Format("INSERT INTO Theater (theaterName, theaterAuthor, theaterDate) VALUES ('{0}','{1}','{2}') ", TheaterName, TheaterAuthor, TheaterDate);
-                dal.ExecuteNonQuery(query);
-
-            }
-            catch (Exception)
-            {
-
-                return false;
-            }
-            return true;
-
         }
 
-        public bool Update(Theater theater)
+        public int Insert(Theater theater)
         {
-            dal = new DataAccessLayer.DAL();
-
-            try
-            {
-                string query = string.Format("UPDATE Theater SET theaterName = '{0}',theaterAuthor = '{1}',theaterDate = '{2}'", TheaterName, TheaterAuthor, TheaterDate);
-                dal.ExecuteNonQuery(query);
-            }
-            catch (Exception)
-            {
-
-                return false;
-            }
-
-            return true;
+            cmd = new SqlCommand("insert into Theater values (@TheaterName,@TheaterAuthor,@TheaterDate)");
+            cmd.Parameters.Add("@TheaterName", SqlDbType.NVarChar).Value = theater.Name;
+            cmd.Parameters.Add("@TheaterAuthor", SqlDbType.NVarChar).Value = theater.Author;
+            cmd.Parameters.Add("@TheaterDate", SqlDbType.DateTime).Value = theater.Date;
+            result = dal.AddDeleteEdit(cmd);
+            return result;
         }
-
+        public int Update (Theater theater)
+        {
+            cmd = new SqlCommand("Update Theater Set (@TheaterName,@TheaterAuthor,@TheaterDate)");
+            cmd.Parameters.Add("@TheaterName", SqlDbType.NVarChar).Value = theater.Name;
+            cmd.Parameters.Add("@TheaterAuthor", SqlDbType.NVarChar).Value = theater.Author;
+            cmd.Parameters.Add("@TheaterDate", SqlDbType.DateTime).Value = theater.Date;
+            result = dal.AddDeleteEdit(cmd);
+            return result;
+        }
         public int Delete(int id)
         {
-            dal = new DataAccessLayer.DAL();
-
-            string query = string.Format("DELETE FROM Theater WHERE theaterID = {0}", id);
-            int DeletedTheater = dal.ExecuteQueries(query);
-            return DeletedTheater;
-
+            cmd = new SqlCommand("Delete from Theater where TheaterID = @id");
+            cmd.Parameters.Add("@id", SqlDbType.Int).Value = id;
+            result = dal.AddDeleteEdit(cmd);
+            return result;
         }
         public DataTable GetTheater()
         {
-            dal = new DataAccessLayer.DAL();
             string query = "select * from Theater";
             DataTable Theater = dal.ShowDataInGridView(query);
             return Theater;
@@ -67,7 +52,7 @@ namespace BusinessLogicLayer
         public string GetTheaterName(int i)
         {
             DataTable Theater = GetTheater();
-            return Theater.Rows[i]["theaterName"].ToString();
+            return Theater.Rows[i]["TheaterName"].ToString();
         }
     }
 }

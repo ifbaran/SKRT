@@ -6,8 +6,11 @@ namespace BusinessLogicLayer.Entities
 {
     public class Chair
     {
-        public int ChairID { get; set; }
-        public int ChairNumber { get; set; }
-        public int RoomID { get; set; }
+        int chairID;
+        int chairNumber;
+        int roomID;
+        public int ChairID { get => chairID; set => chairID = value; }
+        public int ChairNumber { get => chairNumber; set => chairNumber = value; }
+        public int RoomID { get => roomID; set => roomID = value; }
     }
 }

@@ -1,64 +1,63 @@
 ﻿    using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Data.SqlClient;
 using System.Text;
 
 namespace BusinessLogicLayer
 {
-    public class CustomerModule : Customer
+    public class CustomerModule : BaseClass<Customer>
     {
         DataAccessLayer.DAL dal;
-        public bool Insert(Customer customer)
+
+        public CustomerModule()
         {
-            try
-            {
-                dal = new DataAccessLayer.DAL();
-                string query = string.Format("INSERT INTO Customer (customerName, customerSurname, customerEmail, customerChosenFilm, customerSeat) VALUES ('{0}','{1}','{2}','{3}','{4}')", customer.CustomerName, customer.CustomerSurname, customer.CustomerEmail, customer.CustomerChosenFilm, customer.CustomerSeat);
-                dal.ExecuteNonQuery(query);
-
-            }
-            catch (Exception)
-            {
-
-                return false;
-            }
-
-            return true;
+            dal = new DataAccessLayer.DAL();
         }
 
-        public bool Update(Customer customer)
+        public int Insert(Customer customer)
         {
-            try
-            {
-                dal = new DataAccessLayer.DAL();
-                string query = string.Format("UPDATE Customer Set customerName = '{0}', customerSurname = '{1}', customerEmail = '{2}', customerChosenFilm = '{3}',customerSeat = '{4}'", customer.CustomerName, customer.CustomerSurname, customer.CustomerEmail, customer.CustomerChosenFilm, customer.CustomerSeat);
-                dal.ExecuteNonQuery(query);
-
-            }
-            catch (Exception)
-            {
-
-                return false;
-            }
-            return true;
+            cmd = new SqlCommand("INSERT INTO Customer VALUES (@CustomerName,@CustomerSurname,@CustomerEmail,@CustomerChosenFilm,@CustomerSeat)");
+            cmd.Parameters.Add("@CustomerName", SqlDbType.NVarChar).Value = customer.Name;
+            cmd.Parameters.Add("@CustomerSurname", SqlDbType.NVarChar).Value = customer.Surname;
+            cmd.Parameters.Add("@CustomerEMail", SqlDbType.NVarChar).Value = customer.Email;
+            cmd.Parameters.Add("@CustomerChosenFilm", SqlDbType.NVarChar).Value = customer.CustomerChosenFilm;
+            cmd.Parameters.Add("@CustomerSeat", SqlDbType.NVarChar).Value = customer.CustomerSeat;
+            result = dal.AddDeleteEdit(cmd);
+            return result;
+        }
+        public int InquiryID(int id) 
+        {
+            cmd = new SqlCommand("select CustomerID from Customer where CustomerID = @id");
+            cmd.Parameters.Add("@id", SqlDbType.Int).Value = id;
+            obj = dal.GetColumn(cmd);
+            return obj == null ? 0 : (int)obj;
         }
 
+        public int Delete (int id)
+        {
+            cmd = new SqlCommand("Delete from Customer where CustomerID = @id ");
+            cmd.Parameters.Add("@id", SqlDbType.Int).Value = id;
+            result = dal.AddDeleteEdit(cmd);
+            return result;
+        }
+        public int Update (Customer customer)
+        {
+            cmd = new SqlCommand("Update Customer Set (@CustomerName,@CustomerSurname,@CustomerEmail,@CustomerChosenFilm,@CustomerSeat)");
+            cmd.Parameters.Add("@CustomerName", SqlDbType.NVarChar).Value = customer.Name;
+            cmd.Parameters.Add("@CustomerSurname", SqlDbType.NVarChar).Value = customer.Surname;
+            cmd.Parameters.Add("@CustomerEMail", SqlDbType.NVarChar).Value = customer.Email;
+            cmd.Parameters.Add("@CustomerChosenFilm", SqlDbType.NVarChar).Value = customer.CustomerChosenFilm;
+            cmd.Parameters.Add("@CustomerSeat", SqlDbType.NVarChar).Value = customer.CustomerSeat;
+            result = dal.AddDeleteEdit(cmd);
+            return result;
+        }
         public DataTable GetCustomer()
         {
-            dal = new DataAccessLayer.DAL();
-            string query = "SELECT * FROM Customer";
-
-            DataTable customers = dal.ShowDataInGridView(query);
-            return customers;
+            string query = "Select * from Customer";
+            DataTable dataTable = dal.ShowDataInGridView(query);
+            return dataTable;
         }
 
-        public int Delete(int id)
-        {
-            dal = new DataAccessLayer.DAL();
-            string query = string.Format("Delete from Customer where customerID = {0}", id);
-
-            int DeletedCustomer = dal.ExecuteQueries(query);
-            return DeletedCustomer;
-        }
     }
 }

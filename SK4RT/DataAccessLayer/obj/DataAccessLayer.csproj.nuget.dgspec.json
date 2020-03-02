@@ -51,6 +51,10 @@
               "target": "Package",
               "version": "[1.0.112, )"
             },
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.8.1, )"
+            },
             "sqlite": {
               "target": "Package",
               "version": "[3.13.0, )"

@@ -28,6 +28,12 @@ namespace WinUI
         }
         private void SK4RT_Load(object sender, EventArgs e)
         {
+            GetFilmAndTheaterName();
+
+        }
+
+        private void GetFilmAndTheaterName()
+        {
             btnFilm1.Text = string.Empty;
             btnFilm1.Text = filmModule.FilmName(0);
             btnFilm2.Text = string.Empty;
@@ -48,7 +54,6 @@ namespace WinUI
             btnThe4.Text = theaterModule.GetTheaterName(3);
             btnThe5.Text = string.Empty;
             btnThe5.Text = theaterModule.GetTheaterName(4);
-
         }
 
         #region Form Hareket Ettirme Mouse Hareketleri
@@ -126,12 +131,12 @@ namespace WinUI
 
         private void btnMusteriListe_MouseMove(object sender, MouseEventArgs e)
         {
-            btnMusteriListe.BackColor = Color.FromArgb(30, 30, 55);
+            btnList.BackColor = Color.FromArgb(30, 30, 55);
         }
 
         private void btnMusteriListe_MouseLeave(object sender, EventArgs e)
         {
-            btnMusteriListe.BackColor = Color.FromArgb(8, 5, 30);
+            btnList.BackColor = Color.FromArgb(8, 5, 30);
         }
         #endregion
 
@@ -315,7 +320,7 @@ namespace WinUI
 
         #endregion
 
-        private void btnMusteriListe_Click(object sender, EventArgs e)
+        private void btnList_Click(object sender, EventArgs e)
         {
             panelContent.Controls.Clear();
             CustomerForm customerForm = new CustomerForm();
@@ -323,6 +328,12 @@ namespace WinUI
             panelContent.Controls.Add(customerForm);
             customerForm.Show();
             customerForm.Dock = DockStyle.Fill;
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            string empty = string.Empty;
+            Film film = new Film(empty);
         }
     }
 }

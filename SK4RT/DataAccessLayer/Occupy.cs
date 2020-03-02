@@ -7,6 +7,11 @@ namespace DataAccessLayer
 {
     public class Occupy
     {
+        DAL dal;
+        public Occupy()
+        {
+            dal = new DAL();
+        }
         public DataTable SelectOccupyChairs()
         {
             string query = @"SELECT 
@@ -23,7 +28,6 @@ namespace DataAccessLayer
                             inner join Films F on F.FilmID = S.FilmID
                             inner join Chair as C on C.ChairID = OC.ChairID";
 
-            DAL dal = new DAL();
             return dal.ShowDataInGridView(query);
         }
     }

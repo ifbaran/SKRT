@@ -1,61 +1,62 @@
-﻿using System;
+﻿using BusinessLogicLayer.Entities;
+using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Data.SqlClient;
 using System.Text;
 
 namespace BusinessLogicLayer
 {
-    public class WorkerModule : Entities.Worker
+    public class WorkerModule : BaseClass<Worker>
     {
         DataAccessLayer.DAL dal;
-        public bool Insert()
+
+        public WorkerModule()
         {
             dal = new DataAccessLayer.DAL();
-            try
-            {
-                string query = string.Format("INSERT INTO Worker ( workerName, workerSurname, workerEmail) VALUES ('{0}','{1}','{2}')", WorkerName, WorkerSurname, WorkerEmail);
-                dal.ExecuteNonQuery(query);
-            }
-            catch (Exception)
-            {
-
-                return false;
-            }
-            return true;
         }
-        public bool Update()
+        public int Insert(Worker worker)
         {
-            dal = new DataAccessLayer.DAL();
-
-            try
-            {
-                string query = string.Format("UPDATE Worker SET workerName = {0}, workerSurname = {1}, workerEmail = {2}", WorkerName, WorkerSurname, WorkerEmail);
-                dal.ExecuteNonQuery(query);
-            }
-            catch (Exception)
-            {
-
-                return false;
-            }
-            return true;
+            cmd = new SqlCommand("insert into Worker values (@WorkerName,@WorkerSurname,@WorkerEmail,@Nickname,@Password)");
+            cmd.Parameters.Add("@WorkerName", SqlDbType.NVarChar).Value = worker.Name;
+            cmd.Parameters.Add("@WorkerSurname", SqlDbType.NVarChar).Value = worker.Surname;
+            cmd.Parameters.Add("@WorkerEmail", SqlDbType.NVarChar).Value = worker.Email;
+            cmd.Parameters.Add("@Nickname", SqlDbType.NVarChar).Value = worker.NickName;
+            cmd.Parameters.Add("@Password", SqlDbType.NVarChar).Value = worker.Password;
+            result = dal.AddDeleteEdit(cmd);
+            return result;
         }
-
-        public DataTable GetWorker()
+        public int Update(Worker worker)
         {
-            dal = new DataAccessLayer.DAL();
-            string query = "Select * from Worker";
-            var worker = dal.ShowDataInGridView(query);
-
-            return worker;
+            cmd = new SqlCommand("update Worker set (@WorkerName,@WorkerSurname,@WorkerEmail,@Nickname,@Password)");
+            cmd.Parameters.Add("@WorkerName", SqlDbType.NVarChar).Value = worker.Name;
+            cmd.Parameters.Add("@WorkerSurname", SqlDbType.NVarChar).Value = worker.Surname;
+            cmd.Parameters.Add("@WorkerEmail", SqlDbType.NVarChar).Value = worker.Email;
+            cmd.Parameters.Add("@Nickname", SqlDbType.NVarChar).Value = worker.NickName;
+            cmd.Parameters.Add("@Password", SqlDbType.NVarChar).Value = worker.Password;
+            result = dal.AddDeleteEdit(cmd);
+            return result;
         }
-
         public int Delete(int id)
         {
-            dal = new DataAccessLayer.DAL();
-            string query = string.Format("Delete from Worker where workerID = {0}", id);
-
-            int DeletedWorker = dal.ExecuteQueries(query);
-            return DeletedWorker;
+            cmd = new SqlCommand("Delete from Worker where WorkerID= @id");
+            cmd.Parameters.Add("@id", SqlDbType.Int).Value = id;
+            result = dal.AddDeleteEdit(cmd);
+            return result;
         }
+        public DataTable GetWorker()
+        {
+            string query = "select * from Worker";
+            DataTable Theater = dal.ShowDataInGridView(query);
+            return Theater;
+        }
+
+        // "i" kaçıncı satır olduğunu belirliyor yani filmin satırını buluyor.
+        public string GetWorkerName(int i)
+        {
+            DataTable Theater = GetWorker();
+            return Theater.Rows[i]["WorkerName"].ToString();
+        }
+        
     }
 }

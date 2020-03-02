@@ -1,16 +1,17 @@
-﻿using System;
+﻿using BusinessLogicLayer.Entities;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace BusinessLogicLayer
 {
-    public class Customer
+    public class Customer:Person
+
     {
-        public int CustomerID { get; set; }
-        public string CustomerName { get; set; }
-        public string CustomerSurname { get; set; }
-        public string CustomerEmail { get; set; }
-        public string CustomerChosenFilm { get; set; }
-        public string CustomerSeat { get; set; }
+        string customerChosenFilm;
+        string customerSeat;
+
+        public string CustomerChosenFilm { get => customerChosenFilm; set => customerChosenFilm = value; }
+        public string CustomerSeat { get => customerSeat; set => customerSeat = value; }
     }
 }

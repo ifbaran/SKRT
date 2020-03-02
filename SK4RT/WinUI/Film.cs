@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Drawing.Drawing2D;
 using BusinessLogicLayer;
 using System.Collections;
+using System.Data.SqlClient;
 
 namespace WinUI
 {
@@ -17,6 +18,7 @@ namespace WinUI
     {
         SK4RT mainForm = new SK4RT();
         BusinessLogicLayer.CustomerModule customerModule = new CustomerModule();
+        BusinessLogicLayer.Customer customer = new Customer();
         public Film(string filmAdi)
         {
             InitializeComponent();
@@ -41,10 +43,10 @@ namespace WinUI
         {
             Button btn = ((Button)sender);
 
-
             if (isSelectedButton == false)
             {
                 btn.Image = System.Drawing.Image.FromFile(@"C:\YEREL DİSK D\SK4RT\SK4RT\img\yellowChair.png");
+                
                 isSelectedButton = true;
             }
             else
@@ -52,14 +54,13 @@ namespace WinUI
                 btn.Image = System.Drawing.Image.FromFile(@"C:\YEREL DİSK D\SK4RT\SK4RT\img\turqouisChair.png");
                 isSelectedButton = false;
             }
-                
-
-
-
             var btnName = ((Button)sender).Name;
-
         }
 
-
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            Reservation reservation = new Reservation();
+            reservation.ShowDialog();
+        }
     }
 }

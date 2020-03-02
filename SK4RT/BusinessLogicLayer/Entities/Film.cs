@@ -4,12 +4,8 @@ using System.Text;
 
 namespace BusinessLogicLayer.Entities
 {
-    public class Film
+    public class Film:Show
     {
-        public int FilmID { get; set; }
-        public string FilmName { get; set; }
-        public string FilmAuthor { get; set; }
-        public DateTime FilmDate { get; set; }
 
     }
 }

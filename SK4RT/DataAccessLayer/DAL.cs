@@ -2,67 +2,139 @@
 using System.Collections.Generic;
 using System.Text;
 using System.Data;
-using System.Data.SQLite;
+using System.Data.SqlClient;
 
 namespace DataAccessLayer
 {
     public class DAL
     {
-        private string connectionString = @"DataSource = C:\YEREL DİSK D\SK4RT\SK4RT\Database\database.db";
-        SQLiteConnection con;
-        SQLiteCommand cmd;
-        SQLiteDataReader reader;
-        SQLiteDataAdapter adapter;
+        SqlConnection con;
+        SqlCommand cmd;
+        SqlDataReader reader;
+        SqlDataAdapter adapter;
         DataSet ds;
+
+        int returnInt;
+        object returnObj;
 
         public DAL()
         {
-            openConnection();
+            con = new SqlConnection(GetConnectionString());
         }
 
-        private void openConnection()
+        string GetConnectionString()
         {
-            con = new SQLiteConnection(connectionString);
-            con.Open();
-        }
+            string SqlConnectionString = "Server=.;Database = SK4RT; User Id = sa; Password =1;";
 
-        private void closeConnection()
+            //SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder();
+            //builder.DataSource = ".";
+            //builder.InitialCatalog = "SK4RT";
+            //builder.UserID = "sa";
+            //builder.Password = "1";
+            return SqlConnectionString;
+        }
+        public void GetConnectionStatus()
         {
-            con.Close();
+            if (con.State == System.Data.ConnectionState.Closed)
+                con.Open();
+            else
+                con.Close();
+            
         }
-
-        public int ExecuteNonQuery(string query) // Insert,Update,Delete
+        public int AddDeleteEdit(SqlCommand cmd)
         {
-            cmd = new SQLiteCommand();
-            cmd.CommandText = query;
-            cmd.CommandType = CommandType.Text;
-            return cmd.ExecuteNonQuery();
+            cmd.Connection = con;
+            GetConnectionStatus();
+            returnInt = cmd.ExecuteNonQuery();
+            GetConnectionStatus();
+            return returnInt;
         }
-        public int ExecuteQueries(string Query_)
+        public SqlDataReader List(SqlCommand cmd)
         {
-            cmd = new SQLiteCommand(Query_, con);
-            return cmd.ExecuteNonQuery();
-
+            cmd.Connection = con;
+            GetConnectionStatus();
+            return cmd.ExecuteReader();
         }
-        public SQLiteDataReader dataReader(string query)
+        public object GetColumn(SqlCommand cmd)
         {
-            cmd = new SQLiteCommand(query);
-            reader = cmd.ExecuteReader();
-
-            closeConnection();
-            return reader;
+            cmd.Connection = con;
+            GetConnectionStatus();
+            returnObj = cmd.ExecuteScalar();
+            GetConnectionStatus();
+            return returnObj;
         }
-
         public DataTable ShowDataInGridView(string query)
         {
-            adapter = new SQLiteDataAdapter(query, connectionString);
+            
+            adapter = new SqlDataAdapter(query,con);
+            GetConnectionStatus();
             ds = new DataSet();
             adapter.Fill(ds);
 
             DataTable dataTable = ds.Tables[0];
-            closeConnection();
-
+            GetConnectionStatus();
             return dataTable;
         }
+
+
+        //public DataTable ShowDataInGridView(string query)
+        //{
+        //    adapter = new SQLiteDataAdapter(query, connectionString);
+        //    ds = new DataSet();
+        //    adapter.Fill(ds);
+
+        //    DataTable dataTable = ds.Tables[0];
+        //    closeConnection();
+
+        //    return dataTable;
+        //}
+
+
+        //private string connectionString = @"DataSource = C:\YEREL DİSK D\SK4RT\SK4RT\Database\database.db";
+        //SQLiteConnection con;
+        //SQLiteCommand cmd;
+        //SQLiteDataReader reader;
+        //SQLiteDataAdapter adapter;
+        //DataSet ds;
+        //SQLConnection con;
+
+        //public DAL()
+        //{
+        //    openConnection();
+        //}
+
+        //private void openConnection()
+        //{
+        //    con = new SQLiteConnection(connectionString);
+        //    con.Open();
+        //}
+
+        //private void closeConnection()
+        //{
+        //    con.Close();
+        //}
+
+        //public int ExecuteNonQuery(string query) // Insert,Update,Delete
+        //{
+        //    cmd = new SQLiteCommand();
+        //    cmd.CommandText = query;
+        //    cmd.CommandType = CommandType.Text;
+        //    return cmd.ExecuteNonQuery();
+        //}
+        //public int ExecuteQueries(string Query_)
+        //{
+        //    cmd = new SQLiteCommand(Query_, con);
+        //    return cmd.ExecuteNonQuery();
+
+        //}
+        //public SQLiteDataReader dataReader(string query)
+        //{
+        //    cmd = new SQLiteCommand(query);
+        //    reader = cmd.ExecuteReader();
+
+        //    closeConnection();
+        //    return reader;
+        //}
+
     }
 }
