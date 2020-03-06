@@ -12,21 +12,21 @@ namespace DataAccessLayer
         {
             dal = new DAL();
         }
-        public DataTable SelectOccupyChairs()
+        public DataTable GetOccupyChairs()
         {
-            string query = @"SELECT 
-                            F.filmName,
-                            R.Name,
-                            C.ChairNumber,
-                            StartDate,
-                            EndDate,
-                            Status
+                string query = @"SELECT 
+                                F.filmName,
+                                R.Name,
+                                C.ChairNumber,
+                                StartDate,
+                                EndDate,
+                                Status
                             
-                            FROM OccupyChair OC
-                            INNER JOIN Room R ON R.RoomID = OC.RoomID
-                            inner join Session S on S.SessionID = OC.SessionID
-                            inner join Films F on F.FilmID = S.FilmID
-                            inner join Chair as C on C.ChairID = OC.ChairID";
+                                FROM OccupyChair OC
+                                INNER JOIN Room R ON R.RoomID = OC.RoomID
+                                inner join Session S on S.SessionID = OC.SessionID
+                                inner join Films F on F.FilmID = S.FilmID
+                                inner join Chair as C on C.ChairID = OC.ChairID";
 
             return dal.ShowDataInGridView(query);
         }

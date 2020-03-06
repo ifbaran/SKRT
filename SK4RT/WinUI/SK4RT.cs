@@ -15,6 +15,7 @@ namespace WinUI
     {
         BusinessLogicLayer.FilmModule filmModule = new BusinessLogicLayer.FilmModule();
         BusinessLogicLayer.TheaterModule theaterModule = new BusinessLogicLayer.TheaterModule();
+        BusinessLogicLayer.OccupyChairModule OC = new BusinessLogicLayer.OccupyChairModule();
 
         public SK4RT()
         {
@@ -159,17 +160,24 @@ namespace WinUI
         #endregion
 
         #region Film Butonları
-        
+
         private void btnFilm1_Click(object sender, EventArgs e)
         {
-            panelContent.Controls.Clear();
             Film film = new Film(btnFilm1.Text);
+            panelContent.Controls.Clear();
             film.TopLevel = false;
             panelContent.Controls.Add(film);
             film.Show();
             film.Dock = DockStyle.Fill;
-            
-            
+            OC.OccupyChair();
+            if (OC.OccupiedChairStatus() == true)
+            {
+                film.buttonA1.Image = System.Drawing.Image.FromFile(@"C:\YEREL DİSK D\SK4RT\SK4RT\img\redChair.png");
+            }
+            else
+            {
+                film.buttonA1.Image = System.Drawing.Image.FromFile(@"C:\YEREL DİSK D\SK4RT\SK4RT\img\turqouisChair.png");
+            }
             //...
             // operations
             //...

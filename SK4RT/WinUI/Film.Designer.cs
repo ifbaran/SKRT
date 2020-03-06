@@ -1942,7 +1942,6 @@ namespace WinUI
         #endregion
 
         private System.Windows.Forms.Label labelFilmAdi;
-        private System.Windows.Forms.Button buttonA1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button buttonA2;
@@ -2049,5 +2048,6 @@ namespace WinUI
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button buttonA7;
         private System.Windows.Forms.Button btnSave;
+        public System.Windows.Forms.Button buttonA1;
     }
 }

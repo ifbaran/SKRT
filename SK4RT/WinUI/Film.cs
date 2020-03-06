@@ -19,6 +19,8 @@ namespace WinUI
         SK4RT mainForm = new SK4RT();
         BusinessLogicLayer.CustomerModule customerModule = new CustomerModule();
         BusinessLogicLayer.Customer customer = new Customer();
+        BusinessLogicLayer.Helper help = new BusinessLogicLayer.Helper();
+        BusinessLogicLayer.OccupyChairModule OC = new OccupyChairModule();
         public Film(string filmAdi)
         {
             InitializeComponent();
@@ -28,7 +30,16 @@ namespace WinUI
         private void Film_Load(object sender, EventArgs e)
         {
             //bll.GetOccupiedChairs();
+            
         }
+        private string GetFilm()
+        {
+            DataTable films = help.GetFilms();
+            string ComeFilm = films.Rows[0]["FilmName"].ToString();
+
+            return ComeFilm;
+        }
+        
 
         private void Film_FormClosed(object sender, FormClosedEventArgs e)
         {
@@ -59,8 +70,11 @@ namespace WinUI
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            Reservation reservation = new Reservation();
-            reservation.ShowDialog();
+
+
+
+            //Reservation reservation = new Reservation();
+            //reservation.ShowDialog();
         }
     }
 }
