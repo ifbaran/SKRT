@@ -6,3 +6,15 @@ C:\YEREL DİSK D\SK4RT\SK4RT\DataAccessLayer\obj\Debug\netstandard2.0\DataAccess
 C:\YEREL DİSK D\SK4RT\SK4RT\DataAccessLayer\obj\Debug\netstandard2.0\DataAccessLayer.AssemblyInfo.cs
 C:\YEREL DİSK D\SK4RT\SK4RT\DataAccessLayer\obj\Debug\netstandard2.0\DataAccessLayer.dll
 C:\YEREL DİSK D\SK4RT\SK4RT\DataAccessLayer\obj\Debug\netstandard2.0\DataAccessLayer.pdb
+E:\DOCS\SK4RT\SK4RT\DataAccessLayer\bin\Debug\netstandard2.0\DataAccessLayer.deps.json
+E:\DOCS\SK4RT\SK4RT\DataAccessLayer\bin\Debug\netstandard2.0\DataAccessLayer.dll
+E:\DOCS\SK4RT\SK4RT\DataAccessLayer\bin\Debug\netstandard2.0\DataAccessLayer.pdb
+E:\DOCS\SK4RT\SK4RT\DataAccessLayer\obj\Debug\netstandard2.0\DataAccessLayer.csprojAssemblyReference.cache
+E:\DOCS\SK4RT\SK4RT\DataAccessLayer\obj\Debug\netstandard2.0\DataAccessLayer.AssemblyInfoInputs.cache
+E:\DOCS\SK4RT\SK4RT\DataAccessLayer\obj\Debug\netstandard2.0\DataAccessLayer.AssemblyInfo.cs
+E:\DOCS\SK4RT\SK4RT\DataAccessLayer\obj\Debug\netstandard2.0\DataAccessLayer.dll
+E:\DOCS\SK4RT\SK4RT\DataAccessLayer\obj\Debug\netstandard2.0\DataAccessLayer.pdb
+E:\DOCS\SK4RT\SK4RT\DataAccessLayer\bin\Debug\netstandard2.0\Entities.dll
+E:\DOCS\SK4RT\SK4RT\DataAccessLayer\bin\Debug\netstandard2.0\Entities.pdb
+E:\DOCS\SK4RT\SK4RT\DataAccessLayer\obj\Debug\netstandard2.0\DataAccessLayer.csproj.CopyComplete
+E:\DOCS\SK4RT\SK4RT\DataAccessLayer\obj\Debug\netstandard2.0\DataAccessLayer.csproj.CoreCompileInputs.cache

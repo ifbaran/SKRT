@@ -13,5 +13,6 @@ namespace BusinessLogicLayer
         public object obj;
         public List<T> list;
         public T data;
+        
     }
 }

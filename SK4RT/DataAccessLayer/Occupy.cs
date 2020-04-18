@@ -14,7 +14,7 @@ namespace DataAccessLayer
         }
         public DataTable GetOccupyChairs()
         {
-                string query = @"SELECT 
+            string query = @"SELECT 
                                 F.filmName,
                                 R.Name,
                                 C.ChairNumber,

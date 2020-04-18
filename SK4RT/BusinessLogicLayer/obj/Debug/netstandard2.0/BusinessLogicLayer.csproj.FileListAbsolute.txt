@@ -9,3 +9,17 @@ C:\YEREL DİSK D\SK4RT\SK4RT\BusinessLogicLayer\obj\Debug\netstandard2.0\Busines
 C:\YEREL DİSK D\SK4RT\SK4RT\BusinessLogicLayer\obj\Debug\netstandard2.0\BusinessLogicLayer.csproj.CopyComplete
 C:\YEREL DİSK D\SK4RT\SK4RT\BusinessLogicLayer\bin\Debug\netstandard2.0\DataAccessLayer.dll
 C:\YEREL DİSK D\SK4RT\SK4RT\BusinessLogicLayer\bin\Debug\netstandard2.0\DataAccessLayer.pdb
+E:\DOCS\SK4RT\SK4RT\BusinessLogicLayer\bin\Debug\netstandard2.0\BusinessLogicLayer.deps.json
+E:\DOCS\SK4RT\SK4RT\BusinessLogicLayer\bin\Debug\netstandard2.0\BusinessLogicLayer.dll
+E:\DOCS\SK4RT\SK4RT\BusinessLogicLayer\bin\Debug\netstandard2.0\BusinessLogicLayer.pdb
+E:\DOCS\SK4RT\SK4RT\BusinessLogicLayer\bin\Debug\netstandard2.0\DataAccessLayer.dll
+E:\DOCS\SK4RT\SK4RT\BusinessLogicLayer\bin\Debug\netstandard2.0\DataAccessLayer.pdb
+E:\DOCS\SK4RT\SK4RT\BusinessLogicLayer\obj\Debug\netstandard2.0\BusinessLogicLayer.csprojAssemblyReference.cache
+E:\DOCS\SK4RT\SK4RT\BusinessLogicLayer\obj\Debug\netstandard2.0\BusinessLogicLayer.AssemblyInfoInputs.cache
+E:\DOCS\SK4RT\SK4RT\BusinessLogicLayer\obj\Debug\netstandard2.0\BusinessLogicLayer.AssemblyInfo.cs
+E:\DOCS\SK4RT\SK4RT\BusinessLogicLayer\obj\Debug\netstandard2.0\BusinessLogicLayer.csproj.CopyComplete
+E:\DOCS\SK4RT\SK4RT\BusinessLogicLayer\obj\Debug\netstandard2.0\BusinessLogicLayer.dll
+E:\DOCS\SK4RT\SK4RT\BusinessLogicLayer\obj\Debug\netstandard2.0\BusinessLogicLayer.pdb
+E:\DOCS\SK4RT\SK4RT\BusinessLogicLayer\bin\Debug\netstandard2.0\Entities.dll
+E:\DOCS\SK4RT\SK4RT\BusinessLogicLayer\bin\Debug\netstandard2.0\Entities.pdb
+E:\DOCS\SK4RT\SK4RT\BusinessLogicLayer\obj\Debug\netstandard2.0\BusinessLogicLayer.csproj.CoreCompileInputs.cache

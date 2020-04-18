@@ -8,19 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Drawing.Drawing2D;
+using BLL.Abstract;
+using BLL.Abstract; 
 
 namespace WinUI
 {
     public partial class SK4RT : Form
     {
-        BusinessLogicLayer.FilmModule filmModule = new BusinessLogicLayer.FilmModule();
-        BusinessLogicLayer.TheaterModule theaterModule = new BusinessLogicLayer.TheaterModule();
-        BusinessLogicLayer.OccupyChairModule OC = new BusinessLogicLayer.OccupyChairModule();
-
         public SK4RT()
         {
             InitializeComponent();
             customizeDesign();
+
         }
         private void btnClose_Click(object sender, EventArgs e)
         {
@@ -29,32 +28,32 @@ namespace WinUI
         }
         private void SK4RT_Load(object sender, EventArgs e)
         {
-            GetFilmAndTheaterName();
+            //GetFilmAndTheaterName();
 
         }
 
         private void GetFilmAndTheaterName()
         {
-            btnFilm1.Text = string.Empty;
-            btnFilm1.Text = filmModule.FilmName(0);
-            btnFilm2.Text = string.Empty;
-            btnFilm2.Text = filmModule.FilmName(1);
-            btnFilm3.Text = string.Empty;
-            btnFilm3.Text = filmModule.FilmName(2);
-            btnFilm4.Text = string.Empty;
-            btnFilm4.Text = filmModule.FilmName(3);
-            btnFilm5.Text = string.Empty;
-            btnFilm5.Text = filmModule.FilmName(4);
-            btnThe1.Text = string.Empty;
-            btnThe1.Text = theaterModule.GetTheaterName(0);
-            btnThe2.Text = string.Empty;
-            btnThe2.Text = theaterModule.GetTheaterName(1);
-            btnThe3.Text = string.Empty;
-            btnThe3.Text = theaterModule.GetTheaterName(2);
-            btnThe4.Text = string.Empty;
-            btnThe4.Text = theaterModule.GetTheaterName(3);
-            btnThe5.Text = string.Empty;
-            btnThe5.Text = theaterModule.GetTheaterName(4);
+            //btnFilm1.Text = string.Empty;
+            //btnFilm1.Text = filmModule.FilmName(0);
+            //btnFilm2.Text = string.Empty;
+            //btnFilm2.Text = filmModule.FilmName(1);
+            //btnFilm3.Text = string.Empty;
+            //btnFilm3.Text = filmModule.FilmName(2);
+            //btnFilm4.Text = string.Empty;
+            //btnFilm4.Text = filmModule.FilmName(3);
+            //btnFilm5.Text = string.Empty;
+            //btnFilm5.Text = filmModule.FilmName(4);
+            //btnThe1.Text = string.Empty;
+            //btnThe1.Text = theaterModule.GetTheaterName(0);
+            //btnThe2.Text = string.Empty;
+            //btnThe2.Text = theaterModule.GetTheaterName(1);
+            //btnThe3.Text = string.Empty;
+            //btnThe3.Text = theaterModule.GetTheaterName(2);
+            //btnThe4.Text = string.Empty;
+            //btnThe4.Text = theaterModule.GetTheaterName(3);
+            //btnThe5.Text = string.Empty;
+            //btnThe5.Text = theaterModule.GetTheaterName(4);
         }
 
         #region Form Hareket Ettirme Mouse Hareketleri
@@ -88,11 +87,12 @@ namespace WinUI
             panelFilms.Visible = false;
             panelTheaters.Visible = false;
             panelContact.Visible = false;
+            panelShow.Visible = false;
         }
 
         private void hideSubMenu(Panel subMenu)
         {
-            if (subMenu.Visible == true)
+            if (subMenu.Visible)
                 subMenu.Visible = false;
         }
         private void showSubMenu(Panel subMenu)
@@ -132,12 +132,12 @@ namespace WinUI
 
         private void btnMusteriListe_MouseMove(object sender, MouseEventArgs e)
         {
-            btnList.BackColor = Color.FromArgb(30, 30, 55);
+            btnShow.BackColor = Color.FromArgb(30, 30, 55);
         }
 
         private void btnMusteriListe_MouseLeave(object sender, EventArgs e)
         {
-            btnList.BackColor = Color.FromArgb(8, 5, 30);
+            btnShow.BackColor = Color.FromArgb(8, 5, 30);
         }
         #endregion
 
@@ -163,30 +163,30 @@ namespace WinUI
 
         private void btnFilm1_Click(object sender, EventArgs e)
         {
-            Film film = new Film(btnFilm1.Text);
+            Film film = new Film();
             panelContent.Controls.Clear();
             film.TopLevel = false;
             panelContent.Controls.Add(film);
             film.Show();
             film.Dock = DockStyle.Fill;
-            OC.OccupyChair();
-            if (OC.OccupiedChairStatus() == true)
-            {
-                film.buttonA1.Image = System.Drawing.Image.FromFile(@"C:\YEREL DİSK D\SK4RT\SK4RT\img\redChair.png");
-            }
-            else
-            {
-                film.buttonA1.Image = System.Drawing.Image.FromFile(@"C:\YEREL DİSK D\SK4RT\SK4RT\img\turqouisChair.png");
-            }
+            //if (OC.OccupiedChairStatus() == true)
+            //{
+            //    film.buttonA1.Image = System.Drawing.Image.FromFile(@"C:\YEREL DİSK D\SK4RT\SK4RT\img\redChair.png");
+            //}
+            //else
+            //{
+            //    film.buttonA1.Image = System.Drawing.Image.FromFile(@"C:\YEREL DİSK D\SK4RT\SK4RT\img\turqouisChair.png");
+            //}
             //...
             // operations
             //...
+            hideSubMenu(panelFilms);
         }
 
         private void btnFilm2_Click(object sender, EventArgs e)
         {
             panelContent.Controls.Clear();
-            Film film = new Film(btnFilm2.Text);
+            Film film = new Film();
             film.TopLevel = false;
             panelContent.Controls.Add(film);
             film.Show();
@@ -194,12 +194,13 @@ namespace WinUI
             //...
             // operations
             //...
+            hideSubMenu(panelFilms);
         }
 
         private void btnFilm3_Click(object sender, EventArgs e)
         {
             panelContent.Controls.Clear();
-            Film film = new Film(btnFilm3.Text);
+            Film film = new Film();
             film.TopLevel = false;
             panelContent.Controls.Add(film);
             film.Show();
@@ -207,12 +208,13 @@ namespace WinUI
             //...
             // operations
             //...
+            hideSubMenu(panelFilms);
         }
 
         private void btnFilm4_Click(object sender, EventArgs e)
         {
             panelContent.Controls.Clear();
-            Film film = new Film(btnFilm4.Text);
+            Film film = new Film();
             film.TopLevel = false;
             panelContent.Controls.Add(film);
             film.Show();
@@ -220,12 +222,13 @@ namespace WinUI
             //...
             // operations
             //...
+            hideSubMenu(panelFilms);
         }
 
         private void btnFilm5_Click(object sender, EventArgs e)
         {
             panelContent.Controls.Clear();
-            Film film = new Film(btnFilm5.Text);
+            Film film = new Film();
             film.TopLevel = false;
             panelContent.Controls.Add(film);
             film.Show();
@@ -233,6 +236,7 @@ namespace WinUI
             //...
             // operations
             //...
+            hideSubMenu(panelFilms);
         }
 
         #endregion
@@ -249,6 +253,7 @@ namespace WinUI
             //...
             // operations
             //...
+            hideSubMenu(panelTheaters);
         }
 
         private void btnThe2_Click(object sender, EventArgs e)
@@ -262,6 +267,7 @@ namespace WinUI
             //...
             // operations
             //...
+            hideSubMenu(panelTheaters);
         }
 
         private void btnThe3_Click(object sender, EventArgs e)
@@ -275,6 +281,7 @@ namespace WinUI
             //...
             // operations
             //...
+            hideSubMenu(panelTheaters);
         }
 
         private void btnThe4_Click(object sender, EventArgs e)
@@ -288,6 +295,7 @@ namespace WinUI
             //...
             // operations
             //...
+            hideSubMenu(panelTheaters);
         }
 
         private void btnThe5_Click(object sender, EventArgs e)
@@ -301,6 +309,30 @@ namespace WinUI
             //...
             // operations
             //...
+            hideSubMenu(panelTheaters);
+        }
+
+        #endregion
+
+        #region Show Butonları
+
+        private void btnShowCustomer_Click(object sender, EventArgs e)
+        {
+            CustomerForm customerForm = new CustomerForm();
+            panelContent.Controls.Clear();
+            customerForm.TopLevel = false;
+            panelContent.Controls.Add(customerForm);
+            customerForm.Show();
+            customerForm.Dock = DockStyle.Fill;
+            hideSubMenu(panelShow);
+        }
+
+        private void btnShowWorker_Click(object sender, EventArgs e)
+        {
+            //...
+            //...operations
+            //...
+            hideSubMenu(panelShow);
         }
 
         #endregion
@@ -311,9 +343,7 @@ namespace WinUI
             //...
             // operations
             //...
-            //hideSubMenu(panelTheaters);
-            //hideSubMenu(panelFilms);
-            //hideSubMenu(panelContact);
+            hideSubMenu(panelContact);
         }
 
         private void btnSendMailWorker_Click(object sender, EventArgs e)
@@ -321,27 +351,16 @@ namespace WinUI
             //...
             // operations
             //...
-            //hideSubMenu(panelTheaters);
-            //hideSubMenu(panelFilms);
-            //hideSubMenu(panelContact);
+            hideSubMenu(panelContact);
         }
 
         #endregion
 
+
         private void btnList_Click(object sender, EventArgs e)
         {
-            panelContent.Controls.Clear();
-            CustomerForm customerForm = new CustomerForm();
-            customerForm.TopLevel = false;
-            panelContent.Controls.Add(customerForm);
-            customerForm.Show();
-            customerForm.Dock = DockStyle.Fill;
+            showSubMenu(panelShow);
         }
 
-        private void btnSave_Click(object sender, EventArgs e)
-        {
-            string empty = string.Empty;
-            Film film = new Film(empty);
-        }
     }
 }

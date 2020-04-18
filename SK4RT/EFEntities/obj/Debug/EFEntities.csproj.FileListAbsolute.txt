@@ -1,0 +1,6 @@
+E:\DOCS\SK4RT\SK4RT\EFEntities\bin\Debug\EFEntities.dll
+E:\DOCS\SK4RT\SK4RT\EFEntities\bin\Debug\EFEntities.pdb
+E:\DOCS\SK4RT\SK4RT\EFEntities\obj\Debug\EFEntities.csproj.CoreCompileInputs.cache
+E:\DOCS\SK4RT\SK4RT\EFEntities\obj\Debug\EFEntities.dll
+E:\DOCS\SK4RT\SK4RT\EFEntities\obj\Debug\EFEntities.pdb
+E:\DOCS\SK4RT\SK4RT\EFEntities\obj\Debug\EFEntities.csprojAssemblyReference.cache

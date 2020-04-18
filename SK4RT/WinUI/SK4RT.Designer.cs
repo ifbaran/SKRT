@@ -39,7 +39,11 @@ namespace WinUI
             this.btnSendMailWorker = new System.Windows.Forms.Button();
             this.btnSendMailCustomer = new System.Windows.Forms.Button();
             this.btnContact = new System.Windows.Forms.Button();
-            this.btnList = new System.Windows.Forms.Button();
+            this.panelShow = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.btnShowWorker = new System.Windows.Forms.Button();
+            this.btnShowCustomer = new System.Windows.Forms.Button();
+            this.btnShow = new System.Windows.Forms.Button();
             this.panelTheaters = new System.Windows.Forms.Panel();
             this.btnThe5 = new System.Windows.Forms.Button();
             this.btnThe4 = new System.Windows.Forms.Button();
@@ -58,13 +62,19 @@ namespace WinUI
             this.picLogo = new System.Windows.Forms.PictureBox();
             this.panelFooter = new System.Windows.Forms.Panel();
             this.panelContent = new System.Windows.Forms.Panel();
+            this.btn_FilmOperations = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.panelTop.SuspendLayout();
             this.panelMenu.SuspendLayout();
             this.panelContact.SuspendLayout();
+            this.panelShow.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.panelTheaters.SuspendLayout();
             this.panelFilms.SuspendLayout();
             this.panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
+            this.panelFooter.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelTop
@@ -76,7 +86,7 @@ namespace WinUI
             this.panelTop.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.panelTop.Location = new System.Drawing.Point(0, 0);
             this.panelTop.Name = "panelTop";
-            this.panelTop.Size = new System.Drawing.Size(1300, 46);
+            this.panelTop.Size = new System.Drawing.Size(1634, 46);
             this.panelTop.TabIndex = 1;
             this.panelTop.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseDown);
             this.panelTop.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseMove);
@@ -85,7 +95,7 @@ namespace WinUI
             // btnClose
             // 
             this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
-            this.btnClose.Location = new System.Drawing.Point(1263, 12);
+            this.btnClose.Location = new System.Drawing.Point(1602, 15);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(20, 20);
             this.btnClose.TabIndex = 1;
@@ -97,7 +107,7 @@ namespace WinUI
             this.lblHeader.AutoSize = true;
             this.lblHeader.Font = new System.Drawing.Font("Century Gothic", 15F);
             this.lblHeader.ForeColor = System.Drawing.Color.White;
-            this.lblHeader.Location = new System.Drawing.Point(535, 12);
+            this.lblHeader.Location = new System.Drawing.Point(795, 12);
             this.lblHeader.Name = "lblHeader";
             this.lblHeader.Size = new System.Drawing.Size(229, 23);
             this.lblHeader.TabIndex = 0;
@@ -109,7 +119,8 @@ namespace WinUI
             this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(5)))), ((int)(((byte)(30)))));
             this.panelMenu.Controls.Add(this.panelContact);
             this.panelMenu.Controls.Add(this.btnContact);
-            this.panelMenu.Controls.Add(this.btnList);
+            this.panelMenu.Controls.Add(this.panelShow);
+            this.panelMenu.Controls.Add(this.btnShow);
             this.panelMenu.Controls.Add(this.panelTheaters);
             this.panelMenu.Controls.Add(this.btnTheatres);
             this.panelMenu.Controls.Add(this.panelFilms);
@@ -126,7 +137,7 @@ namespace WinUI
             this.panelContact.Controls.Add(this.btnSendMailWorker);
             this.panelContact.Controls.Add(this.btnSendMailCustomer);
             this.panelContact.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelContact.Location = new System.Drawing.Point(0, 653);
+            this.panelContact.Location = new System.Drawing.Point(0, 721);
             this.panelContact.Name = "panelContact";
             this.panelContact.Size = new System.Drawing.Size(253, 68);
             this.panelContact.TabIndex = 7;
@@ -172,7 +183,7 @@ namespace WinUI
             this.btnContact.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnContact.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.btnContact.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnContact.Location = new System.Drawing.Point(0, 600);
+            this.btnContact.Location = new System.Drawing.Point(0, 668);
             this.btnContact.Name = "btnContact";
             this.btnContact.Size = new System.Drawing.Size(253, 53);
             this.btnContact.TabIndex = 6;
@@ -180,22 +191,75 @@ namespace WinUI
             this.btnContact.UseVisualStyleBackColor = true;
             this.btnContact.Click += new System.EventHandler(this.btnContact_Click);
             // 
-            // btnList
+            // panelShow
             // 
-            this.btnList.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnList.FlatAppearance.BorderSize = 0;
-            this.btnList.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnList.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.btnList.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnList.Location = new System.Drawing.Point(0, 547);
-            this.btnList.Name = "btnList";
-            this.btnList.Size = new System.Drawing.Size(253, 53);
-            this.btnList.TabIndex = 5;
-            this.btnList.Text = "Show";
-            this.btnList.UseVisualStyleBackColor = true;
-            this.btnList.Click += new System.EventHandler(this.btnList_Click);
-            this.btnList.MouseLeave += new System.EventHandler(this.btnMusteriListe_MouseLeave);
-            this.btnList.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btnMusteriListe_MouseMove);
+            this.panelShow.Controls.Add(this.panel1);
+            this.panelShow.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelShow.Location = new System.Drawing.Point(0, 600);
+            this.panelShow.Name = "panelShow";
+            this.panelShow.Size = new System.Drawing.Size(253, 68);
+            this.panelShow.TabIndex = 12;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.btnShowWorker);
+            this.panel1.Controls.Add(this.btnShowCustomer);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(253, 68);
+            this.panel1.TabIndex = 8;
+            // 
+            // btnShowWorker
+            // 
+            this.btnShowWorker.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
+            this.btnShowWorker.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnShowWorker.FlatAppearance.BorderSize = 0;
+            this.btnShowWorker.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnShowWorker.Font = new System.Drawing.Font("Century Gothic", 10F);
+            this.btnShowWorker.ForeColor = System.Drawing.Color.LightGray;
+            this.btnShowWorker.Location = new System.Drawing.Point(0, 34);
+            this.btnShowWorker.Name = "btnShowWorker";
+            this.btnShowWorker.Size = new System.Drawing.Size(253, 34);
+            this.btnShowWorker.TabIndex = 9;
+            this.btnShowWorker.Text = "Worker";
+            this.btnShowWorker.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnShowWorker.UseVisualStyleBackColor = false;
+            this.btnShowWorker.Click += new System.EventHandler(this.btnShowWorker_Click);
+            // 
+            // btnShowCustomer
+            // 
+            this.btnShowCustomer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
+            this.btnShowCustomer.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnShowCustomer.FlatAppearance.BorderSize = 0;
+            this.btnShowCustomer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnShowCustomer.Font = new System.Drawing.Font("Century Gothic", 10F);
+            this.btnShowCustomer.ForeColor = System.Drawing.Color.LightGray;
+            this.btnShowCustomer.Location = new System.Drawing.Point(0, 0);
+            this.btnShowCustomer.Name = "btnShowCustomer";
+            this.btnShowCustomer.Size = new System.Drawing.Size(253, 34);
+            this.btnShowCustomer.TabIndex = 8;
+            this.btnShowCustomer.Text = "Customer";
+            this.btnShowCustomer.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnShowCustomer.UseVisualStyleBackColor = false;
+            this.btnShowCustomer.Click += new System.EventHandler(this.btnShowCustomer_Click);
+            // 
+            // btnShow
+            // 
+            this.btnShow.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnShow.FlatAppearance.BorderSize = 0;
+            this.btnShow.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnShow.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.btnShow.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnShow.Location = new System.Drawing.Point(0, 547);
+            this.btnShow.Name = "btnShow";
+            this.btnShow.Size = new System.Drawing.Size(253, 53);
+            this.btnShow.TabIndex = 5;
+            this.btnShow.Text = "Show";
+            this.btnShow.UseVisualStyleBackColor = true;
+            this.btnShow.Click += new System.EventHandler(this.btnList_Click);
+            this.btnShow.MouseLeave += new System.EventHandler(this.btnMusteriListe_MouseLeave);
+            this.btnShow.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btnMusteriListe_MouseMove);
             // 
             // panelTheaters
             // 
@@ -452,10 +516,13 @@ namespace WinUI
             // panelFooter
             // 
             this.panelFooter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(5)))), ((int)(((byte)(30)))));
+            this.panelFooter.Controls.Add(this.button2);
+            this.panelFooter.Controls.Add(this.button1);
+            this.panelFooter.Controls.Add(this.btn_FilmOperations);
             this.panelFooter.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panelFooter.Location = new System.Drawing.Point(253, 780);
             this.panelFooter.Name = "panelFooter";
-            this.panelFooter.Size = new System.Drawing.Size(1047, 100);
+            this.panelFooter.Size = new System.Drawing.Size(1381, 100);
             this.panelFooter.TabIndex = 2;
             // 
             // panelContent
@@ -463,15 +530,57 @@ namespace WinUI
             this.panelContent.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelContent.Location = new System.Drawing.Point(253, 46);
             this.panelContent.Name = "panelContent";
-            this.panelContent.Size = new System.Drawing.Size(1047, 734);
+            this.panelContent.Size = new System.Drawing.Size(1381, 734);
             this.panelContent.TabIndex = 4;
+            // 
+            // btn_FilmOperations
+            // 
+            this.btn_FilmOperations.BackColor = System.Drawing.Color.Gainsboro;
+            this.btn_FilmOperations.FlatAppearance.BorderSize = 0;
+            this.btn_FilmOperations.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_FilmOperations.Font = new System.Drawing.Font("Century Gothic", 10F);
+            this.btn_FilmOperations.ForeColor = System.Drawing.Color.Black;
+            this.btn_FilmOperations.Location = new System.Drawing.Point(50, 25);
+            this.btn_FilmOperations.Name = "btn_FilmOperations";
+            this.btn_FilmOperations.Size = new System.Drawing.Size(150, 50);
+            this.btn_FilmOperations.TabIndex = 12;
+            this.btn_FilmOperations.Text = "Film Operations";
+            this.btn_FilmOperations.UseVisualStyleBackColor = false;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Gainsboro;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Century Gothic", 10F);
+            this.button1.ForeColor = System.Drawing.Color.Black;
+            this.button1.Location = new System.Drawing.Point(219, 25);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(150, 50);
+            this.button1.TabIndex = 12;
+            this.button1.Text = "Film Operations";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.Gainsboro;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Century Gothic", 10F);
+            this.button2.ForeColor = System.Drawing.Color.Black;
+            this.button2.Location = new System.Drawing.Point(390, 25);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(150, 50);
+            this.button2.TabIndex = 12;
+            this.button2.Text = "Film Operations";
+            this.button2.UseVisualStyleBackColor = false;
             // 
             // SK4RT
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(55)))));
-            this.ClientSize = new System.Drawing.Size(1300, 880);
+            this.ClientSize = new System.Drawing.Size(1634, 880);
             this.Controls.Add(this.panelContent);
             this.Controls.Add(this.panelFooter);
             this.Controls.Add(this.panelMenu);
@@ -486,10 +595,13 @@ namespace WinUI
             this.panelTop.PerformLayout();
             this.panelMenu.ResumeLayout(false);
             this.panelContact.ResumeLayout(false);
+            this.panelShow.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
             this.panelTheaters.ResumeLayout(false);
             this.panelFilms.ResumeLayout(false);
             this.panelLogo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).EndInit();
+            this.panelFooter.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -520,13 +632,20 @@ namespace WinUI
         private Button btnThe3;
         private Button btnThe2;
         private Button btnThe1;
-        private Button btnList;
         private Button btnContact;
         private Panel panelContact;
         private Button btnSendMailWorker;
         private Button btnSendMailCustomer;
-        private Panel panelContent;
         public Button btnFilm1;
+        private Panel panelShow;
+        private Panel panel1;
+        private Button btnShowWorker;
+        private Button btnShowCustomer;
+        private Button btnShow;
+        private Button button2;
+        private Button button1;
+        private Button btn_FilmOperations;
+        private Panel panelContent;
         //protected override void OnPaint(PaintEventArgs e)
         //{
         //    ControlPaint.DrawBorder(e.Graphics, ClientRectangle, System.Drawing.Color as color ,ButtonBorderStyle.Solid);

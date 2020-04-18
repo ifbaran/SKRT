@@ -1,9 +1,10 @@
-﻿using BusinessLogicLayer.Entities;
+﻿using Entities;
 using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using System.Text;
+using Entities.Concrete;
 
 namespace BusinessLogicLayer
 {
@@ -18,22 +19,22 @@ namespace BusinessLogicLayer
         public int Insert(Worker worker)
         {
             cmd = new SqlCommand("insert into Worker values (@WorkerName,@WorkerSurname,@WorkerEmail,@Nickname,@Password)");
-            cmd.Parameters.Add("@WorkerName", SqlDbType.NVarChar).Value = worker.Name;
-            cmd.Parameters.Add("@WorkerSurname", SqlDbType.NVarChar).Value = worker.Surname;
-            cmd.Parameters.Add("@WorkerEmail", SqlDbType.NVarChar).Value = worker.Email;
-            cmd.Parameters.Add("@Nickname", SqlDbType.NVarChar).Value = worker.NickName;
-            cmd.Parameters.Add("@Password", SqlDbType.NVarChar).Value = worker.Password;
+            cmd.Parameters.Add("@WorkerName", SqlDbType.NVarChar).Value = worker.WorkerName;
+            cmd.Parameters.Add("@WorkerSurname", SqlDbType.NVarChar).Value = worker.WorkerLastName;
+            cmd.Parameters.Add("@WorkerEmail", SqlDbType.NVarChar).Value = worker.WorkerEmail;
+            cmd.Parameters.Add("@Nickname", SqlDbType.NVarChar).Value = worker.WorkerUsername;
+            cmd.Parameters.Add("@Password", SqlDbType.NVarChar).Value = worker.WorkerPassword;
             result = dal.AddDeleteEdit(cmd);
             return result;
         }
         public int Update(Worker worker)
         {
             cmd = new SqlCommand("update Worker set (@WorkerName,@WorkerSurname,@WorkerEmail,@Nickname,@Password)");
-            cmd.Parameters.Add("@WorkerName", SqlDbType.NVarChar).Value = worker.Name;
-            cmd.Parameters.Add("@WorkerSurname", SqlDbType.NVarChar).Value = worker.Surname;
-            cmd.Parameters.Add("@WorkerEmail", SqlDbType.NVarChar).Value = worker.Email;
-            cmd.Parameters.Add("@Nickname", SqlDbType.NVarChar).Value = worker.NickName;
-            cmd.Parameters.Add("@Password", SqlDbType.NVarChar).Value = worker.Password;
+            cmd.Parameters.Add("@WorkerName", SqlDbType.NVarChar).Value = worker.WorkerName;
+            cmd.Parameters.Add("@WorkerSurname", SqlDbType.NVarChar).Value = worker.WorkerLastName;
+            cmd.Parameters.Add("@WorkerEmail", SqlDbType.NVarChar).Value = worker.WorkerEmail;
+            cmd.Parameters.Add("@Nickname", SqlDbType.NVarChar).Value = worker.WorkerUsername;
+            cmd.Parameters.Add("@Password", SqlDbType.NVarChar).Value = worker.WorkerPassword;
             result = dal.AddDeleteEdit(cmd);
             return result;
         }

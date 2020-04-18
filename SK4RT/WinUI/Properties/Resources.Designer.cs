@@ -83,6 +83,16 @@ namespace WinUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap turqouisChair1 {
+            get {
+                object obj = ResourceManager.GetObject("turqouisChair1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap yellowChair {
             get {
                 object obj = ResourceManager.GetObject("yellowChair", resourceCulture);

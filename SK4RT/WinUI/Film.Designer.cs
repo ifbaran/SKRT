@@ -1,4 +1,5 @@
-﻿using System.Drawing.Drawing2D;
+﻿using System.Drawing;
+using System.Drawing.Drawing2D;
 namespace WinUI
 {
     partial class Film
@@ -29,6 +30,7 @@ namespace WinUI
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Film));
             this.labelFilmAdi = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -37,7 +39,26 @@ namespace WinUI
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.cmbSession = new System.Windows.Forms.ComboBox();
+            this.sessionBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.sK4RTDataSet = new WinUI.SK4RTDataSet();
+            this.sessionBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.label6 = new System.Windows.Forms.Label();
+            this.sessionTableAdapter = new WinUI.SK4RTDataSetTableAdapters.SessionTableAdapter();
+            this.btnReservation = new System.Windows.Forms.Button();
+            this.sessionBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.sK4RTDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.grpCustomerData = new System.Windows.Forms.GroupBox();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.btnSave = new System.Windows.Forms.Button();
+            this.txtCustomerChair = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.txtCustomerLastname = new System.Windows.Forms.TextBox();
+            this.txtCustomerEmail = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.txtCustomerName = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -139,6 +160,13 @@ namespace WinUI
             this.buttonA2 = new System.Windows.Forms.Button();
             this.buttonA1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.sessionBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sK4RTDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sessionBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sessionBindingSource2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sK4RTDataSetBindingSource)).BeginInit();
+            this.grpCustomerData.SuspendLayout();
+            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -149,7 +177,7 @@ namespace WinUI
             // 
             this.labelFilmAdi.AutoSize = true;
             this.labelFilmAdi.Font = new System.Drawing.Font("Century Gothic", 22F);
-            this.labelFilmAdi.Location = new System.Drawing.Point(441, 77);
+            this.labelFilmAdi.Location = new System.Drawing.Point(432, 78);
             this.labelFilmAdi.Name = "labelFilmAdi";
             this.labelFilmAdi.Size = new System.Drawing.Size(88, 37);
             this.labelFilmAdi.TabIndex = 0;
@@ -191,7 +219,7 @@ namespace WinUI
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.label3.Location = new System.Drawing.Point(353, 27);
+            this.label3.Location = new System.Drawing.Point(469, 27);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(112, 21);
             this.label3.TabIndex = 103;
@@ -201,7 +229,7 @@ namespace WinUI
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.label4.Location = new System.Drawing.Point(561, 27);
+            this.label4.Location = new System.Drawing.Point(813, 27);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(118, 21);
             this.label4.TabIndex = 103;
@@ -211,30 +239,193 @@ namespace WinUI
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.label5.Location = new System.Drawing.Point(783, 27);
+            this.label5.Location = new System.Drawing.Point(1139, 27);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(102, 21);
             this.label5.TabIndex = 103;
             this.label5.Text = "Your Choise";
             // 
+            // cmbSession
+            // 
+            this.cmbSession.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(55)))));
+            this.cmbSession.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbSession.ForeColor = System.Drawing.Color.Gainsboro;
+            this.cmbSession.FormattingEnabled = true;
+            this.cmbSession.Location = new System.Drawing.Point(1093, 91);
+            this.cmbSession.Name = "cmbSession";
+            this.cmbSession.Size = new System.Drawing.Size(244, 24);
+            this.cmbSession.TabIndex = 105;
+            // 
+            // sessionBindingSource
+            // 
+            this.sessionBindingSource.DataMember = "Session";
+            this.sessionBindingSource.DataSource = this.sK4RTDataSet;
+            // 
+            // sK4RTDataSet
+            // 
+            this.sK4RTDataSet.DataSetName = "SK4RTDataSet";
+            this.sK4RTDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // sessionBindingSource1
+            // 
+            this.sessionBindingSource1.DataMember = "Session";
+            this.sessionBindingSource1.DataSource = this.sK4RTDataSet;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Century Gothic", 12.25F);
+            this.label6.Location = new System.Drawing.Point(975, 91);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(77, 21);
+            this.label6.TabIndex = 106;
+            this.label6.Text = "Session: ";
+            // 
+            // sessionTableAdapter
+            // 
+            this.sessionTableAdapter.ClearBeforeFill = true;
+            // 
+            // btnReservation
+            // 
+            this.btnReservation.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(5)))), ((int)(((byte)(30)))));
+            this.btnReservation.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnReservation.FlatAppearance.BorderSize = 0;
+            this.btnReservation.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReservation.Font = new System.Drawing.Font("Century Gothic", 11F);
+            this.btnReservation.Location = new System.Drawing.Point(0, 0);
+            this.btnReservation.Name = "btnReservation";
+            this.btnReservation.Size = new System.Drawing.Size(182, 75);
+            this.btnReservation.TabIndex = 6;
+            this.btnReservation.Text = "Reservation";
+            this.btnReservation.UseVisualStyleBackColor = false;
+            // 
+            // sessionBindingSource2
+            // 
+            this.sessionBindingSource2.DataMember = "Session";
+            this.sessionBindingSource2.DataSource = this.sK4RTDataSet;
+            // 
+            // sK4RTDataSetBindingSource
+            // 
+            this.sK4RTDataSetBindingSource.DataSource = this.sK4RTDataSet;
+            this.sK4RTDataSetBindingSource.Position = 0;
+            // 
+            // grpCustomerData
+            // 
+            this.grpCustomerData.Controls.Add(this.panel2);
+            this.grpCustomerData.Controls.Add(this.txtCustomerChair);
+            this.grpCustomerData.Controls.Add(this.label10);
+            this.grpCustomerData.Controls.Add(this.txtCustomerLastname);
+            this.grpCustomerData.Controls.Add(this.txtCustomerEmail);
+            this.grpCustomerData.Controls.Add(this.label8);
+            this.grpCustomerData.Controls.Add(this.label9);
+            this.grpCustomerData.Controls.Add(this.txtCustomerName);
+            this.grpCustomerData.Controls.Add(this.label7);
+            this.grpCustomerData.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.grpCustomerData.Font = new System.Drawing.Font("Century Gothic", 10.25F);
+            this.grpCustomerData.ForeColor = System.Drawing.Color.Gainsboro;
+            this.grpCustomerData.Location = new System.Drawing.Point(976, 143);
+            this.grpCustomerData.Name = "grpCustomerData";
+            this.grpCustomerData.Size = new System.Drawing.Size(370, 490);
+            this.grpCustomerData.TabIndex = 107;
+            this.grpCustomerData.TabStop = false;
+            this.grpCustomerData.Text = "Customer Data";
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.btnSave);
+            this.panel2.Controls.Add(this.btnReservation);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel2.Location = new System.Drawing.Point(3, 412);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(364, 75);
+            this.panel2.TabIndex = 105;
+            // 
             // btnSave
             // 
-            this.btnSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(5)))), ((int)(((byte)(30)))));
+            this.btnSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(210)))), ((int)(((byte)(201)))));
+            this.btnSave.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnSave.FlatAppearance.BorderSize = 0;
             this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSave.Font = new System.Drawing.Font("Century Gothic", 11F);
-            this.btnSave.Location = new System.Drawing.Point(897, 676);
+            this.btnSave.ForeColor = System.Drawing.Color.Black;
+            this.btnSave.Location = new System.Drawing.Point(182, 0);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(138, 46);
-            this.btnSave.TabIndex = 104;
-            this.btnSave.Text = "Reservation";
+            this.btnSave.Size = new System.Drawing.Size(182, 75);
+            this.btnSave.TabIndex = 5;
+            this.btnSave.Text = "Reservation && Save";
             this.btnSave.UseVisualStyleBackColor = false;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            this.btnSave.MouseLeave += new System.EventHandler(this.btnSave_MouseLeave);
+            this.btnSave.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btnSave_MouseMove);
+            // 
+            // txtCustomerChair
+            // 
+            this.txtCustomerChair.Location = new System.Drawing.Point(107, 337);
+            this.txtCustomerChair.Name = "txtCustomerChair";
+            this.txtCustomerChair.Size = new System.Drawing.Size(231, 24);
+            this.txtCustomerChair.TabIndex = 4;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(18, 337);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(50, 19);
+            this.label10.TabIndex = 0;
+            this.label10.Text = "Chair:";
+            // 
+            // txtCustomerLastname
+            // 
+            this.txtCustomerLastname.Location = new System.Drawing.Point(107, 151);
+            this.txtCustomerLastname.Name = "txtCustomerLastname";
+            this.txtCustomerLastname.Size = new System.Drawing.Size(231, 24);
+            this.txtCustomerLastname.TabIndex = 2;
+            // 
+            // txtCustomerEmail
+            // 
+            this.txtCustomerEmail.Location = new System.Drawing.Point(107, 244);
+            this.txtCustomerEmail.Name = "txtCustomerEmail";
+            this.txtCustomerEmail.Size = new System.Drawing.Size(231, 24);
+            this.txtCustomerEmail.TabIndex = 3;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(18, 151);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(74, 19);
+            this.label8.TabIndex = 0;
+            this.label8.Text = "Surname:";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(18, 244);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(51, 19);
+            this.label9.TabIndex = 0;
+            this.label9.Text = "E-Mail";
+            // 
+            // txtCustomerName
+            // 
+            this.txtCustomerName.Location = new System.Drawing.Point(107, 63);
+            this.txtCustomerName.Name = "txtCustomerName";
+            this.txtCustomerName.Size = new System.Drawing.Size(231, 24);
+            this.txtCustomerName.TabIndex = 1;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(18, 63);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(55, 19);
+            this.label7.TabIndex = 6;
+            this.label7.Text = "Name:";
             // 
             // pictureBox4
             // 
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(727, 11);
+            this.pictureBox4.Location = new System.Drawing.Point(1083, 11);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(50, 50);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -244,7 +435,7 @@ namespace WinUI
             // pictureBox3
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(505, 11);
+            this.pictureBox3.Location = new System.Drawing.Point(757, 11);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(50, 50);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -254,7 +445,7 @@ namespace WinUI
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(297, 11);
+            this.pictureBox2.Location = new System.Drawing.Point(413, 11);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(50, 50);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -1062,7 +1253,7 @@ namespace WinUI
             this.button38.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button38.Font = new System.Drawing.Font("Century Gothic", 8.25F);
             this.button38.ForeColor = System.Drawing.Color.Black;
-            this.button38.Image = global::WinUI.Properties.Resources.turqouisChair;
+            this.button38.Image = ((System.Drawing.Image)(resources.GetObject("button38.Image")));
             this.button38.Location = new System.Drawing.Point(792, 395);
             this.button38.Name = "button38";
             this.button38.Size = new System.Drawing.Size(51, 44);
@@ -1770,7 +1961,7 @@ namespace WinUI
             this.buttonA3.Location = new System.Drawing.Point(270, 584);
             this.buttonA3.Name = "buttonA3";
             this.buttonA3.Size = new System.Drawing.Size(51, 44);
-            this.buttonA3.TabIndex = 4;
+            this.buttonA3.TabIndex = 3;
             this.buttonA3.Text = "A3";
             this.buttonA3.UseVisualStyleBackColor = false;
             this.buttonA3.Click += new System.EventHandler(this.btnChair_Click);
@@ -1786,7 +1977,7 @@ namespace WinUI
             this.buttonA2.Location = new System.Drawing.Point(200, 584);
             this.buttonA2.Name = "buttonA2";
             this.buttonA2.Size = new System.Drawing.Size(51, 44);
-            this.buttonA2.TabIndex = 3;
+            this.buttonA2.TabIndex = 1;
             this.buttonA2.Text = "A2";
             this.buttonA2.UseVisualStyleBackColor = false;
             this.buttonA2.Click += new System.EventHandler(this.btnChair_Click);
@@ -1794,15 +1985,15 @@ namespace WinUI
             // buttonA1
             // 
             this.buttonA1.BackColor = System.Drawing.Color.Transparent;
+            this.buttonA1.BackgroundImage = global::WinUI.Properties.Resources.turqouisChair;
             this.buttonA1.FlatAppearance.BorderSize = 0;
             this.buttonA1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonA1.Font = new System.Drawing.Font("Century Gothic", 8.25F);
             this.buttonA1.ForeColor = System.Drawing.Color.Black;
-            this.buttonA1.Image = ((System.Drawing.Image)(resources.GetObject("buttonA1.Image")));
             this.buttonA1.Location = new System.Drawing.Point(130, 584);
             this.buttonA1.Name = "buttonA1";
             this.buttonA1.Size = new System.Drawing.Size(48, 48);
-            this.buttonA1.TabIndex = 1;
+            this.buttonA1.TabIndex = 0;
             this.buttonA1.Text = "A1";
             this.buttonA1.UseVisualStyleBackColor = false;
             this.buttonA1.Click += new System.EventHandler(this.btnChair_Click);
@@ -1812,9 +2003,11 @@ namespace WinUI
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(55)))));
-            this.ClientSize = new System.Drawing.Size(1047, 734);
-            this.Controls.Add(this.btnSave);
+            this.ClientSize = new System.Drawing.Size(1357, 734);
+            this.Controls.Add(this.grpCustomerData);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
+            this.Controls.Add(this.cmbSession);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -1930,6 +2123,14 @@ namespace WinUI
             this.Load += new System.EventHandler(this.Film_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.sessionBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sK4RTDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sessionBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sessionBindingSource2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sK4RTDataSetBindingSource)).EndInit();
+            this.grpCustomerData.ResumeLayout(false);
+            this.grpCustomerData.PerformLayout();
+            this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -2047,7 +2248,26 @@ namespace WinUI
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button buttonA7;
-        private System.Windows.Forms.Button btnSave;
         public System.Windows.Forms.Button buttonA1;
+        private System.Windows.Forms.ComboBox cmbSession;
+        private System.Windows.Forms.Label label6;
+        private SK4RTDataSet sK4RTDataSet;
+        private System.Windows.Forms.BindingSource sessionBindingSource;
+        private SK4RTDataSetTableAdapters.SessionTableAdapter sessionTableAdapter;
+        private System.Windows.Forms.BindingSource sessionBindingSource1;
+        private System.Windows.Forms.Button btnReservation;
+        private System.Windows.Forms.BindingSource sessionBindingSource2;
+        private System.Windows.Forms.BindingSource sK4RTDataSetBindingSource;
+        private System.Windows.Forms.GroupBox grpCustomerData;
+        private System.Windows.Forms.TextBox txtCustomerChair;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox txtCustomerLastname;
+        private System.Windows.Forms.TextBox txtCustomerEmail;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox txtCustomerName;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button btnSave;
     }
 }

@@ -1,9 +1,9 @@
-﻿using BusinessLogicLayer.Entities;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Data.SqlClient;
 using System.Data;
+using Entities.Concrete;
 
 namespace BusinessLogicLayer
 {
@@ -18,7 +18,7 @@ namespace BusinessLogicLayer
 
         public int Login(string nickname, string password)
         {
-            cmd = new SqlCommand("select WorkerID from Worker where Nickname = @nickname and Password = @password");
+            cmd = new SqlCommand("select WorkerId from Worker where WorkerUsername = @nickname and WorkerPassword = @password");
             cmd.Parameters.Add("@nickname", SqlDbType.NVarChar).Value = nickname;
             cmd.Parameters.Add("@password", SqlDbType.NVarChar).Value = password;
             obj = dal.GetColumn(cmd);

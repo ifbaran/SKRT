@@ -1,9 +1,9 @@
-﻿using BusinessLogicLayer.Entities;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using System.Text;
+using Entities.Concrete;
 
 namespace BusinessLogicLayer
 {
@@ -19,18 +19,18 @@ namespace BusinessLogicLayer
         public int Insert(Theater theater)
         {
             cmd = new SqlCommand("insert into Theater values (@TheaterName,@TheaterAuthor,@TheaterDate)");
-            cmd.Parameters.Add("@TheaterName", SqlDbType.NVarChar).Value = theater.Name;
-            cmd.Parameters.Add("@TheaterAuthor", SqlDbType.NVarChar).Value = theater.Author;
-            cmd.Parameters.Add("@TheaterDate", SqlDbType.DateTime).Value = theater.Date;
+            cmd.Parameters.Add("@TheaterName", SqlDbType.NVarChar).Value = theater.TheaterName;
+            cmd.Parameters.Add("@TheaterAuthor", SqlDbType.NVarChar).Value = theater.TheaterAuthor;
+            cmd.Parameters.Add("@TheaterDate", SqlDbType.Int).Value = theater.TheaterPeriod;
             result = dal.AddDeleteEdit(cmd);
             return result;
         }
         public int Update (Theater theater)
         {
             cmd = new SqlCommand("Update Theater Set (@TheaterName,@TheaterAuthor,@TheaterDate)");
-            cmd.Parameters.Add("@TheaterName", SqlDbType.NVarChar).Value = theater.Name;
-            cmd.Parameters.Add("@TheaterAuthor", SqlDbType.NVarChar).Value = theater.Author;
-            cmd.Parameters.Add("@TheaterDate", SqlDbType.DateTime).Value = theater.Date;
+            cmd.Parameters.Add("@TheaterName", SqlDbType.NVarChar).Value = theater.TheaterName;
+            cmd.Parameters.Add("@TheaterAuthor", SqlDbType.NVarChar).Value = theater.TheaterAuthor;
+            cmd.Parameters.Add("@TheaterDate", SqlDbType.Int).Value = theater.TheaterPeriod;
             result = dal.AddDeleteEdit(cmd);
             return result;
         }

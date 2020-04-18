@@ -12,7 +12,6 @@ namespace WinUI
 {
     public partial class Login : Form
     {
-        BusinessLogicLayer.System system = new BusinessLogicLayer.System();
         public Login()
         {
             InitializeComponent();
@@ -55,7 +54,13 @@ namespace WinUI
         // Giriş İşlemleri
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            if (system.Login(txtUsername.Text, txtPassword.Text) != 0)
+            //if (system.Login(txtUsername.Text, txtPassword.Text) != 0)
+            //{
+            //    SK4RT form = new SK4RT();
+            //    form.Show();
+            //    this.Hide();
+            //}
+            if (txtUsername.Text == "a" && txtPassword.Text=="a")
             {
                 SK4RT form = new SK4RT();
                 form.Show();
