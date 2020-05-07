@@ -139,35 +139,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Abstract\IChairDal.cs" />
-    <Compile Include="Abstract\ICustomerDal.cs" />
-    <Compile Include="Abstract\IEntityRepository.cs" />
-    <Compile Include="Abstract\IFilmDal.cs" />
-    <Compile Include="Abstract\ISaloonDal.cs" />
-    <Compile Include="Abstract\ISessionDal.cs" />
-    <Compile Include="Abstract\ITheaterDal.cs" />
-    <Compile Include="Abstract\ITicketDal.cs" />
-    <Compile Include="Abstract\IWorkerDal.cs" />
-    <Compile Include="Model\Chairs.cs" />
-    <Compile Include="Model\Customers.cs" />
-    <Compile Include="Model\Films.cs" />
-    <Compile Include="Model\Saloons.cs" />
-    <Compile Include="Model\Sessions.cs" />
-    <Compile Include="Model\SK4RTContext.cs" />
-    <Compile Include="Model\Theaters.cs" />
-    <Compile Include="Model\Tickets.cs" />
-    <Compile Include="Model\Workers.cs" />
+    <Compile Include="Models\Admins.cs" />
+    <Compile Include="Models\Chairs.cs" />
+    <Compile Include="Models\Customers.cs" />
+    <Compile Include="Models\Films.cs" />
+    <Compile Include="Models\Saloons.cs" />
+    <Compile Include="Models\Sessions.cs" />
+    <Compile Include="Models\SK4RTContext.cs" />
+    <Compile Include="Models\Theaters.cs" />
+    <Compile Include="Models\Tickets.cs" />
+    <Compile Include="Models\Workers.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
     <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\EFEntities\EFEntities.csproj">
-      <Project>{1db39aea-af11-4c7f-84fe-6ff1415434c0}</Project>
-      <Name>EFEntities</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Microsoft.Data.SqlClient.SNI.1.0.19235.1\build\net46\Microsoft.Data.SqlClient.SNI.targets" Condition="Exists('..\packages\Microsoft.Data.SqlClient.SNI.1.0.19235.1\build\net46\Microsoft.Data.SqlClient.SNI.targets')" />

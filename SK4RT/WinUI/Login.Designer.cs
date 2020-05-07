@@ -44,6 +44,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnLoginAdmin = new System.Windows.Forms.Button();
             this.panelTop.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -100,6 +101,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(55)))));
+            this.panel1.Controls.Add(this.btnLoginAdmin);
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.txtPassword);
@@ -120,7 +122,7 @@
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Gainsboro;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(120, 200);
+            this.pictureBox2.Location = new System.Drawing.Point(142, 200);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(32, 32);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -131,7 +133,7 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Gainsboro;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(120, 108);
+            this.pictureBox1.Location = new System.Drawing.Point(142, 108);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(32, 32);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -144,11 +146,10 @@
             this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtPassword.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.txtPassword.ForeColor = System.Drawing.Color.Gainsboro;
-            this.txtPassword.Location = new System.Drawing.Point(159, 211);
+            this.txtPassword.Location = new System.Drawing.Point(181, 211);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(209, 20);
             this.txtPassword.TabIndex = 1;
-            this.txtPassword.Text = "a";
             this.txtPassword.UseSystemPasswordChar = true;
             // 
             // txtUsername
@@ -157,16 +158,15 @@
             this.txtUsername.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtUsername.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.txtUsername.ForeColor = System.Drawing.Color.Gainsboro;
-            this.txtUsername.Location = new System.Drawing.Point(159, 117);
+            this.txtUsername.Location = new System.Drawing.Point(181, 117);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(210, 20);
             this.txtUsername.TabIndex = 0;
-            this.txtUsername.Text = "a";
             // 
             // panel2
             // 
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Location = new System.Drawing.Point(120, 233);
+            this.panel2.Location = new System.Drawing.Point(142, 233);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(240, 1);
             this.panel2.TabIndex = 5;
@@ -174,20 +174,21 @@
             // panelLine
             // 
             this.panelLine.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panelLine.Location = new System.Drawing.Point(120, 141);
+            this.panelLine.Location = new System.Drawing.Point(142, 141);
             this.panelLine.Name = "panelLine";
             this.panelLine.Size = new System.Drawing.Size(240, 1);
             this.panelLine.TabIndex = 4;
             // 
             // btnLogin
             // 
+            this.btnLogin.FlatAppearance.BorderColor = System.Drawing.Color.Gainsboro;
             this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogin.Font = new System.Drawing.Font("Century Gothic", 13F);
-            this.btnLogin.Location = new System.Drawing.Point(110, 306);
+            this.btnLogin.Location = new System.Drawing.Point(35, 291);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(210, 80);
+            this.btnLogin.Size = new System.Drawing.Size(150, 72);
             this.btnLogin.TabIndex = 2;
-            this.btnLogin.Text = "Login";
+            this.btnLogin.Text = "Login as Worker";
             this.btnLogin.UseVisualStyleBackColor = true;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
@@ -196,7 +197,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 14F);
             this.label3.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label3.Location = new System.Drawing.Point(9, 209);
+            this.label3.Location = new System.Drawing.Point(25, 209);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(105, 22);
             this.label3.TabIndex = 2;
@@ -207,7 +208,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 14F);
             this.label2.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label2.Location = new System.Drawing.Point(3, 112);
+            this.label2.Location = new System.Drawing.Point(25, 112);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(111, 22);
             this.label2.TabIndex = 1;
@@ -223,6 +224,19 @@
             this.label1.Size = new System.Drawing.Size(59, 22);
             this.label1.TabIndex = 0;
             this.label1.Text = "Login";
+            // 
+            // btnLoginAdmin
+            // 
+            this.btnLoginAdmin.FlatAppearance.BorderColor = System.Drawing.Color.Gainsboro;
+            this.btnLoginAdmin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLoginAdmin.Font = new System.Drawing.Font("Century Gothic", 13F);
+            this.btnLoginAdmin.Location = new System.Drawing.Point(232, 291);
+            this.btnLoginAdmin.Name = "btnLoginAdmin";
+            this.btnLoginAdmin.Size = new System.Drawing.Size(150, 72);
+            this.btnLoginAdmin.TabIndex = 3;
+            this.btnLoginAdmin.Text = "Login as Admin";
+            this.btnLoginAdmin.UseVisualStyleBackColor = true;
+            this.btnLoginAdmin.Click += new System.EventHandler(this.btnLoginAdmin_Click);
             // 
             // Login
             // 
@@ -265,5 +279,6 @@
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button btnLoginAdmin;
     }
 }

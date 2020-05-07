@@ -144,17 +144,47 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ChairForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChairForm.Designer.cs">
+      <DependentUpon>ChairForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="CustomerForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="CustomerForm.Designer.cs">
       <DependentUpon>CustomerForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="CustomerOperations.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomerOperations.Designer.cs">
+      <DependentUpon>CustomerOperations.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EmailForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmailForm.Designer.cs">
+      <DependentUpon>EmailForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Film.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Film.Designer.cs">
       <DependentUpon>Film.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FilmForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FilmForm.Designer.cs">
+      <DependentUpon>FilmForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FilmOperations.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FilmOperations.Designer.cs">
+      <DependentUpon>FilmOperations.cs</DependentUpon>
     </Compile>
     <Compile Include="Helper.cs" />
     <Compile Include="Login.cs">
@@ -163,11 +193,29 @@
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="SaloonForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SaloonForm.Designer.cs">
+      <DependentUpon>SaloonForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="SaveCustomer.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="SaveCustomer.Designer.cs">
       <DependentUpon>SaveCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SessionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SessionForm.Designer.cs">
+      <DependentUpon>SessionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SessionSaloonForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SessionSaloonForm.Designer.cs">
+      <DependentUpon>SessionSaloonForm.cs</DependentUpon>
     </Compile>
     <Compile Include="SK4RT.cs">
       <SubType>Form</SubType>
@@ -188,11 +236,68 @@
     <Compile Include="Theater.Designer.cs">
       <DependentUpon>Theater.cs</DependentUpon>
     </Compile>
+    <Compile Include="TheaterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TheaterForm.Designer.cs">
+      <DependentUpon>TheaterForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TheaterOperations.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TheaterOperations.Designer.cs">
+      <DependentUpon>TheaterOperations.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TicketForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TicketForm.Designer.cs">
+      <DependentUpon>TicketForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TicketOperation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TicketOperation.Designer.cs">
+      <DependentUpon>TicketOperation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TicketSale.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TicketSale.Designer.cs">
+      <DependentUpon>TicketSale.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WorkerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WorkerForm.Designer.cs">
+      <DependentUpon>WorkerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WorkerOperations.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WorkerOperations.Designer.cs">
+      <DependentUpon>WorkerOperations.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="ChairForm.resx">
+      <DependentUpon>ChairForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CustomerForm.resx">
       <DependentUpon>CustomerForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CustomerOperations.resx">
+      <DependentUpon>CustomerOperations.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmailForm.resx">
+      <DependentUpon>EmailForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Film.resx">
       <DependentUpon>Film.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FilmForm.resx">
+      <DependentUpon>FilmForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FilmOperations.resx">
+      <DependentUpon>FilmOperations.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
@@ -207,14 +312,44 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="SaloonForm.resx">
+      <DependentUpon>SaloonForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SaveCustomer.resx">
       <DependentUpon>SaveCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SessionForm.resx">
+      <DependentUpon>SessionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SessionSaloonForm.resx">
+      <DependentUpon>SessionSaloonForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SK4RT.resx">
       <DependentUpon>SK4RT.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Theater.resx">
       <DependentUpon>Theater.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TheaterForm.resx">
+      <DependentUpon>TheaterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TheaterOperations.resx">
+      <DependentUpon>TheaterOperations.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TicketForm.resx">
+      <DependentUpon>TicketForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TicketOperation.resx">
+      <DependentUpon>TicketOperation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TicketSale.resx">
+      <DependentUpon>TicketSale.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WorkerForm.resx">
+      <DependentUpon>WorkerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WorkerOperations.resx">
+      <DependentUpon>WorkerOperations.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="..\.editorconfig">
       <Link>.editorconfig</Link>
@@ -261,10 +396,6 @@
     <ProjectReference Include="..\DAL\DAL.csproj">
       <Project>{7AE6943A-E56D-4F04-844C-EEC327489359}</Project>
       <Name>DAL</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\EFEntities\EFEntities.csproj">
-      <Project>{1db39aea-af11-4c7f-84fe-6ff1415434c0}</Project>
-      <Name>EFEntities</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

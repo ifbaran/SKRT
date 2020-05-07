@@ -1,30 +1,19 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using BLL.Concrete;
-using BLL.Concrete;
-using DAL.Model;
-using EFEntities.Concrete;
-using EFEntities.Concrete;
+using BLL.Models;
+using DAL.Models;
 
 namespace WinUI
 {
     public partial class SaveCustomer : Form
     {
         private Customers _customers;
-        private SK4RTContext context;
-
+        private BLL.Models.CustomerManager customerManager;
         public SaveCustomer(Customers customer)
         {
             InitializeComponent();
             _customers = customer;
-            context = new SK4RTContext();
+            customerManager = new CustomerManager();
         }
 
         #region Form Hareketi
@@ -71,14 +60,7 @@ namespace WinUI
             
             try
             {
-                _customers = new Customers
-                {
-                    CustomerName = txtName.Text,
-                    CustomerLastName = txtCustomerSurname.Text,
-                    CustomerEmail = txtCustomerEmail.Text
-                };
-                context.Customers.Add(_customers);
-                context.SaveChanges();
+                customerManager.AddCustomer(txtName.Text,txtCustomerSurname.Text,txtCustomerEmail.Text);
                 MessageBox.Show("Kayıt Başarıyla Alınmıştır.");
             }
             catch (Exception exception)

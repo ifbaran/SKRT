@@ -1,20 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using BLL.Enums;
+using BLL.Models;
+using DAL.Models;
 
 namespace WinUI
 {
     public partial class Login : Form
     {
+        private BLL.Models.LoginManager loginManager;
         public Login()
         {
             InitializeComponent();
+            loginManager = new LoginManager();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -54,15 +54,24 @@ namespace WinUI
         // Giriş İşlemleri
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            //if (system.Login(txtUsername.Text, txtPassword.Text) != 0)
-            //{
-            //    SK4RT form = new SK4RT();
-            //    form.Show();
-            //    this.Hide();
-            //}
-            if (txtUsername.Text == "a" && txtPassword.Text=="a")
+            if (loginManager.LoginProcessWorker(txtUsername.Text, txtPassword.Text))
             {
-                SK4RT form = new SK4RT();
+                string name = loginManager.GetWorkerName(txtUsername.Text.Trim(), txtPassword.Text.Trim());
+                SK4RT form = new SK4RT(LoginType.Worker, name);
+                form.Show();
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("Kullanıcı adı veya şifre hatalı", "HATA!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnLoginAdmin_Click(object sender, EventArgs e)
+        {
+            if (loginManager.LoginProcessAdmins(txtUsername.Text,txtPassword.Text))
+            {
+                SK4RT form = new SK4RT(LoginType.Admin, "Administrator");
                 form.Show();
                 this.Hide();
             }

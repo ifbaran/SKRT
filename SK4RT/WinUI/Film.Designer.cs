@@ -30,27 +30,19 @@ namespace WinUI
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Film));
             this.labelFilmAdi = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.cmbSession = new System.Windows.Forms.ComboBox();
-            this.sessionBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.sK4RTDataSet = new WinUI.SK4RTDataSet();
-            this.sessionBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.label6 = new System.Windows.Forms.Label();
-            this.sessionTableAdapter = new WinUI.SK4RTDataSetTableAdapters.SessionTableAdapter();
-            this.btnReservation = new System.Windows.Forms.Button();
-            this.sessionBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
-            this.sK4RTDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.btnAddTicket = new System.Windows.Forms.Button();
             this.grpCustomerData = new System.Windows.Forms.GroupBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.btnSave = new System.Windows.Forms.Button();
+            this.btnSaveCustomer = new System.Windows.Forms.Button();
             this.txtCustomerChair = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.txtCustomerLastname = new System.Windows.Forms.TextBox();
@@ -60,7 +52,6 @@ namespace WinUI
             this.txtCustomerName = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button85 = new System.Windows.Forms.Button();
@@ -159,16 +150,12 @@ namespace WinUI
             this.buttonA3 = new System.Windows.Forms.Button();
             this.buttonA2 = new System.Windows.Forms.Button();
             this.buttonA1 = new System.Windows.Forms.Button();
+            this.cmbSaloon = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.sessionBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sK4RTDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sessionBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sessionBindingSource2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sK4RTDataSetBindingSource)).BeginInit();
             this.grpCustomerData.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -219,21 +206,11 @@ namespace WinUI
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.label3.Location = new System.Drawing.Point(469, 27);
+            this.label3.Location = new System.Drawing.Point(661, 27);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(112, 21);
             this.label3.TabIndex = 103;
             this.label3.Text = "Empty Chairs";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.label4.Location = new System.Drawing.Point(813, 27);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(118, 21);
-            this.label4.TabIndex = 103;
-            this.label4.Text = "Double Chairs";
             // 
             // label5
             // 
@@ -256,21 +233,6 @@ namespace WinUI
             this.cmbSession.Size = new System.Drawing.Size(244, 24);
             this.cmbSession.TabIndex = 105;
             // 
-            // sessionBindingSource
-            // 
-            this.sessionBindingSource.DataMember = "Session";
-            this.sessionBindingSource.DataSource = this.sK4RTDataSet;
-            // 
-            // sK4RTDataSet
-            // 
-            this.sK4RTDataSet.DataSetName = "SK4RTDataSet";
-            this.sK4RTDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // sessionBindingSource1
-            // 
-            this.sessionBindingSource1.DataMember = "Session";
-            this.sessionBindingSource1.DataSource = this.sK4RTDataSet;
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -281,33 +243,20 @@ namespace WinUI
             this.label6.TabIndex = 106;
             this.label6.Text = "Session: ";
             // 
-            // sessionTableAdapter
+            // btnAddTicket
             // 
-            this.sessionTableAdapter.ClearBeforeFill = true;
-            // 
-            // btnReservation
-            // 
-            this.btnReservation.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(5)))), ((int)(((byte)(30)))));
-            this.btnReservation.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btnReservation.FlatAppearance.BorderSize = 0;
-            this.btnReservation.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReservation.Font = new System.Drawing.Font("Century Gothic", 11F);
-            this.btnReservation.Location = new System.Drawing.Point(0, 0);
-            this.btnReservation.Name = "btnReservation";
-            this.btnReservation.Size = new System.Drawing.Size(182, 75);
-            this.btnReservation.TabIndex = 6;
-            this.btnReservation.Text = "Reservation";
-            this.btnReservation.UseVisualStyleBackColor = false;
-            // 
-            // sessionBindingSource2
-            // 
-            this.sessionBindingSource2.DataMember = "Session";
-            this.sessionBindingSource2.DataSource = this.sK4RTDataSet;
-            // 
-            // sK4RTDataSetBindingSource
-            // 
-            this.sK4RTDataSetBindingSource.DataSource = this.sK4RTDataSet;
-            this.sK4RTDataSetBindingSource.Position = 0;
+            this.btnAddTicket.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(5)))), ((int)(((byte)(30)))));
+            this.btnAddTicket.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnAddTicket.FlatAppearance.BorderSize = 0;
+            this.btnAddTicket.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddTicket.Font = new System.Drawing.Font("Century Gothic", 11F);
+            this.btnAddTicket.Location = new System.Drawing.Point(0, 0);
+            this.btnAddTicket.Name = "btnAddTicket";
+            this.btnAddTicket.Size = new System.Drawing.Size(182, 75);
+            this.btnAddTicket.TabIndex = 6;
+            this.btnAddTicket.Text = "Buy Ticket";
+            this.btnAddTicket.UseVisualStyleBackColor = false;
+            this.btnAddTicket.Click += new System.EventHandler(this.btnAddTicket_Click);
             // 
             // grpCustomerData
             // 
@@ -323,7 +272,7 @@ namespace WinUI
             this.grpCustomerData.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.grpCustomerData.Font = new System.Drawing.Font("Century Gothic", 10.25F);
             this.grpCustomerData.ForeColor = System.Drawing.Color.Gainsboro;
-            this.grpCustomerData.Location = new System.Drawing.Point(976, 143);
+            this.grpCustomerData.Location = new System.Drawing.Point(975, 221);
             this.grpCustomerData.Name = "grpCustomerData";
             this.grpCustomerData.Size = new System.Drawing.Size(370, 490);
             this.grpCustomerData.TabIndex = 107;
@@ -332,31 +281,31 @@ namespace WinUI
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.btnSave);
-            this.panel2.Controls.Add(this.btnReservation);
+            this.panel2.Controls.Add(this.btnSaveCustomer);
+            this.panel2.Controls.Add(this.btnAddTicket);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel2.Location = new System.Drawing.Point(3, 412);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(364, 75);
             this.panel2.TabIndex = 105;
             // 
-            // btnSave
+            // btnSaveCustomer
             // 
-            this.btnSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(210)))), ((int)(((byte)(201)))));
-            this.btnSave.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnSave.FlatAppearance.BorderSize = 0;
-            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSave.Font = new System.Drawing.Font("Century Gothic", 11F);
-            this.btnSave.ForeColor = System.Drawing.Color.Black;
-            this.btnSave.Location = new System.Drawing.Point(182, 0);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(182, 75);
-            this.btnSave.TabIndex = 5;
-            this.btnSave.Text = "Reservation && Save";
-            this.btnSave.UseVisualStyleBackColor = false;
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
-            this.btnSave.MouseLeave += new System.EventHandler(this.btnSave_MouseLeave);
-            this.btnSave.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btnSave_MouseMove);
+            this.btnSaveCustomer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(210)))), ((int)(((byte)(201)))));
+            this.btnSaveCustomer.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnSaveCustomer.FlatAppearance.BorderSize = 0;
+            this.btnSaveCustomer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSaveCustomer.Font = new System.Drawing.Font("Century Gothic", 11F);
+            this.btnSaveCustomer.ForeColor = System.Drawing.Color.Black;
+            this.btnSaveCustomer.Location = new System.Drawing.Point(182, 0);
+            this.btnSaveCustomer.Name = "btnSaveCustomer";
+            this.btnSaveCustomer.Size = new System.Drawing.Size(182, 75);
+            this.btnSaveCustomer.TabIndex = 5;
+            this.btnSaveCustomer.Text = "Save Customer";
+            this.btnSaveCustomer.UseVisualStyleBackColor = false;
+            this.btnSaveCustomer.Click += new System.EventHandler(this.btnSaveCustomer_Click);
+            this.btnSaveCustomer.MouseLeave += new System.EventHandler(this.btnSave_MouseLeave);
+            this.btnSaveCustomer.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btnSave_MouseMove);
             // 
             // txtCustomerChair
             // 
@@ -432,20 +381,10 @@ namespace WinUI
             this.pictureBox4.TabIndex = 101;
             this.pictureBox4.TabStop = false;
             // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(757, 11);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(50, 50);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 100;
-            this.pictureBox3.TabStop = false;
-            // 
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(413, 11);
+            this.pictureBox2.Location = new System.Drawing.Point(605, 11);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(50, 50);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -1998,6 +1937,27 @@ namespace WinUI
             this.buttonA1.UseVisualStyleBackColor = false;
             this.buttonA1.Click += new System.EventHandler(this.btnChair_Click);
             // 
+            // cmbSaloon
+            // 
+            this.cmbSaloon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(55)))));
+            this.cmbSaloon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbSaloon.ForeColor = System.Drawing.Color.Gainsboro;
+            this.cmbSaloon.FormattingEnabled = true;
+            this.cmbSaloon.Location = new System.Drawing.Point(1093, 143);
+            this.cmbSaloon.Name = "cmbSaloon";
+            this.cmbSaloon.Size = new System.Drawing.Size(244, 24);
+            this.cmbSaloon.TabIndex = 105;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 12.25F);
+            this.label4.Location = new System.Drawing.Point(975, 143);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(75, 21);
+            this.label4.TabIndex = 106;
+            this.label4.Text = "Saloon: ";
+            // 
             // Film
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -2005,14 +1965,14 @@ namespace WinUI
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(55)))));
             this.ClientSize = new System.Drawing.Size(1357, 734);
             this.Controls.Add(this.grpCustomerData);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
+            this.Controls.Add(this.cmbSaloon);
             this.Controls.Add(this.cmbSession);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.pictureBox4);
-            this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button85);
@@ -2123,16 +2083,10 @@ namespace WinUI
             this.Load += new System.EventHandler(this.Film_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.sessionBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sK4RTDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sessionBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sessionBindingSource2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sK4RTDataSetBindingSource)).EndInit();
             this.grpCustomerData.ResumeLayout(false);
             this.grpCustomerData.PerformLayout();
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -2241,23 +2195,15 @@ namespace WinUI
         private System.Windows.Forms.Button button96;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button buttonA7;
         public System.Windows.Forms.Button buttonA1;
         private System.Windows.Forms.ComboBox cmbSession;
         private System.Windows.Forms.Label label6;
-        private SK4RTDataSet sK4RTDataSet;
-        private System.Windows.Forms.BindingSource sessionBindingSource;
-        private SK4RTDataSetTableAdapters.SessionTableAdapter sessionTableAdapter;
-        private System.Windows.Forms.BindingSource sessionBindingSource1;
-        private System.Windows.Forms.Button btnReservation;
-        private System.Windows.Forms.BindingSource sessionBindingSource2;
-        private System.Windows.Forms.BindingSource sK4RTDataSetBindingSource;
+        private System.Windows.Forms.Button btnAddTicket;
         private System.Windows.Forms.GroupBox grpCustomerData;
         private System.Windows.Forms.TextBox txtCustomerChair;
         private System.Windows.Forms.Label label10;
@@ -2268,6 +2214,8 @@ namespace WinUI
         private System.Windows.Forms.TextBox txtCustomerName;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.Button btnSaveCustomer;
+        private System.Windows.Forms.ComboBox cmbSaloon;
+        private System.Windows.Forms.Label label4;
     }
 }
